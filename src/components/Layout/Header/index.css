@@ -1,0 +1,7 @@
+.header_container {
+    background-color: #ffffff;
+    padding: 0.7rem 0rem;
+}
+.select_box > div{
+    border: 0 !important;
+}

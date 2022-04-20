@@ -1,0 +1,184 @@
+.home_container {
+    background-color: #E5E5E5;
+}
+.carousel_container{
+    row-gap: 0px;
+    margin: 3rem 4rem;
+}
+.middle_carousel{
+    margin: 0rem 1rem;
+}
+.promoted_card{
+    height: 401px;
+    width: 300px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 20px rgb(0 0 0 / 4%);
+    border-radius: 12px !important;   
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 25px;
+    color: #1D1C24;
+}
+.promo_bar{
+    border: 1px solid #f3ebeb;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 0.8rem 0rem;
+    margin: 0.8rem 0rem;
+    border-radius: 12px !important;   
+    width: 100%;
+}
+.promo_icon{
+    width: 100px;
+    height: 40px;
+}
+.offer_card{
+    height: 401px;
+    /* width: 300px; */
+    background: #FFFFFF;
+    box-shadow: 0px 4px 20px rgb(0 0 0 / 4%);
+    border-radius: 12px !important;   
+}
+.offer_box{
+    margin: 2rem;
+}
+.offer_card > .ant-card-body{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(179.67deg, #DBE7F8 0.21%, #E9F3FF 99.65%);
+    padding: 0;
+}
+.offer_image{
+    height: 400px;
+    width: 225px;
+}
+.offer_text{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 40px;
+    color: #000000;
+}
+.offer_type{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #8C8C8C;
+}
+.gift_des{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+    color: #858585;
+}
+.gift_title{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 124%;
+    text-align: center;
+    color: #120078;
+}
+.gift_icon{
+    width: 169px;
+    height: 150px;
+    margin-bottom: 1rem;
+}
+.list_view{
+    margin: 1rem 4rem;
+    padding-bottom: 1rem;
+}
+.list_bar{
+    height: 5rem;
+}
+.list_title{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 40px;
+    color: #1D1C24;
+}
+.list_action{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 25px;
+    color: #1D1C24;
+    display: flex;
+    align-items: center;
+}
+.list_action > p {
+    margin-bottom: 0;
+    margin-right: 0.4rem;
+}
+.deals_box{
+
+}
+.deals_container{
+    width: 300;
+    margin-top: 16;
+}
+.deals_container >div{
+    padding: 18px;
+}
+.deals_action{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: #FB5607;
+}
+.deals_offer{
+    background: rgba(131, 56, 236, 0.07);
+    border-radius: 4px;
+    width: fit-content;
+    padding: 0.5rem;
+    margin: 0.5rem 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #8338EC;
+}
+.deals_mode{
+    background: rgba(0, 0, 0, 0.04);
+    border-radius: 4px;
+    width: fit-content;
+    padding: 0.5rem;
+    margin: 0.5rem 0rem;
+    margin-bottom: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #120078;
+}
+
+.deals_offer_title{
+    margin-right: 0.5rem;
+}
+.deals_title{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #1D1C24;
+    margin-top: 1rem;
+}

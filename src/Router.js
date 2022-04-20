@@ -1,12 +1,14 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Homepage from "./pages/Homepage";
+import HomePage from "./pages/HomePage";
 
 const RouterApp = () => {
   return (
-    <Routes>
-      <Route path="/" element={<Homepage />} />
-    </Routes>
+    <React.Fragment>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+      </Routes>
+    </React.Fragment>
   );
 };
 
