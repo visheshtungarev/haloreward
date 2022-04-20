@@ -20,7 +20,7 @@ const Index = () => {
             size="large"
             showSearch
             style={{ width: 200, border: 0 }}
-            placeholder="Search to Select"
+            placeholder="Categories"
             optionFilterProp="children"
           >
             <Option value="5">option 1</Option>
@@ -29,7 +29,7 @@ const Index = () => {
         </Row>
       </Col>
       <Col>
-        <Search size="large" placeholder="input search text" enterButton />
+        <Search size="large" placeholder="Search stores" enterButton />
       </Col>
       <Col>
         <Row align="middle" justify="">
