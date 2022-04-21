@@ -117,3 +117,178 @@ export const expiringDeals = [
     modeIcon: <ShopOutlined />
   }
 ];
+export const trendingBrands = [
+  {
+    image: "./Images/flipkart.png",
+    title: "Flipkart",
+    cashback: "upto 11% cashback",
+
+  },
+  {
+
+    image: "./Images/nykaa.png",
+    title: "Nykaa",
+    cashback: "upto 11% cashback",
+
+  },
+  {
+
+    image: "./Images/flipkart.png",
+    title: "Flipkart",
+    cashback: "upto 11% cashback",
+  },
+  {
+
+    image: "./Images/nykaa.png",
+    title: "Nykaa",
+    cashback: "upto 11% cashback",
+
+  },
+  {
+
+    image: "./Images/flipkart.png",
+    title: "Flipkart",
+    cashback: "upto 11% cashback",
+
+  },
+  {
+
+    image: "./Images/nykaa.png",
+    title: "Nykaa",
+    cashback: "upto 11% cashback",
+
+  }
+]
+export const featureOffers = [
+  {
+    offer: "Coupon",
+    mode: "Online",
+    image: "./Images/flipkart.png",
+    title: "Win a chance to get voucher of worth £280",
+    time: "Expires Sep 4, 2021",
+    brand: "Flipkart",
+    offerIcon: <CopyOutlined />,
+    modeIcon: <GlobalOutlined />
+  },
+  {
+    offer: "Cashback",
+    mode: "Instore",
+    image: "./Images/nykaa.png",
+    title: "Win a chance to get voucher of worth £280",
+    time: "Expires Sep 4, 2021",
+    brand: "Flipkart",
+    offerIcon: <ShoppingOutlined />,
+    modeIcon: <ShopOutlined />
+  },
+  {
+    offer: "Prize Draw",
+    mode: "Instore & online",
+    image: "./Images/flipkart.png",
+    title: "Win a chance to get voucher of worth £280",
+    time: "Expires Sep 4, 2021",
+    brand: "Flipkart",
+    offerIcon: <CopyOutlined />,
+    modeIcon: <GlobalOutlined />
+  }
+];
+
+
+export const popularOffers = [
+  {
+    offer: "Coupon",
+    mode: "Online",
+    image: "./Images/flipkart.png",
+    title: "Sitewide Savings: up to 50% off + extra 20% off £50+ purchase!",
+    viewAll: "view all offers (24)",
+    brand: "Flipkart",
+    offerIcon: <ShoppingOutlined />,
+    modeIcon: <ShopOutlined />
+  },
+  {
+    offer: "Coupon",
+    mode: "Online",
+    image: "./Images/flipkart.png",
+    title: "Sitewide Savings: up to 50% off + extra 20% off £50+ purchase!",
+    viewAll: "view all offers (24)",
+    brand: "Flipkart",
+    offerIcon: <CopyOutlined />,
+    modeIcon: <GlobalOutlined />
+  },
+  {
+    offer: "Coupon",
+    mode: "Online",
+    image: "./Images/flipkart.png",
+    title: "Sitewide Savings: up to 50% off + extra 20% off £50+ purchase!",
+    viewAll: "view all offers (24)",
+    brand: "Flipkart",
+    offerIcon: <CopyOutlined />,
+    modeIcon: <GlobalOutlined />
+  },
+  {
+    offer: "Coupon",
+    mode: "Online",
+    image: "./Images/flipkart.png",
+    title: "Sitewide Savings: up to 50% off + extra 20% off £50+ purchase!",
+    viewAll: "view all offers (24)",
+    brand: "Flipkart",
+    offerIcon: <CopyOutlined />,
+    modeIcon: <GlobalOutlined />
+  },
+  {
+    offer: "Coupon",
+    mode: "Online",
+    image: "./Images/flipkart.png",
+    title: "Sitewide Savings: up to 50% off + extra 20% off £50+ purchase!",
+    viewAll: "view all offers (24)",
+    brand: "Flipkart",
+    offerIcon: <CopyOutlined />,
+    modeIcon: <GlobalOutlined />
+  },
+  {
+    offer: "Coupon",
+    mode: "Online",
+    image: "./Images/flipkart.png",
+    title: "Sitewide Savings: up to 50% off + extra 20% off £50+ purchase!",
+    viewAll: "view all offers (24)",
+    brand: "Flipkart",
+    offerIcon: <CopyOutlined />,
+    modeIcon: <GlobalOutlined />
+  }, {
+    offer: "Coupon",
+    mode: "Online",
+    image: "./Images/flipkart.png",
+    title: "Sitewide Savings: up to 50% off + extra 20% off £50+ purchase!",
+    viewAll: "view all offers (24)",
+    brand: "Flipkart",
+    offerIcon: <CopyOutlined />,
+    modeIcon: <GlobalOutlined />
+  },
+  {
+    offer: "Coupon",
+    mode: "Online",
+    image: "./Images/flipkart.png",
+    title: "Sitewide Savings: up to 50% off + extra 20% off £50+ purchase!",
+    viewAll: "view all offers (24)",
+    brand: "Flipkart",
+    offerIcon: <CopyOutlined />,
+    modeIcon: <GlobalOutlined />
+  }, {
+    offer: "Coupon",
+    mode: "Online",
+    image: "./Images/flipkart.png",
+    title: "Sitewide Savings: up to 50% off + extra 20% off £50+ purchase!",
+    viewAll: "view all offers (24)",
+    brand: "Flipkart",
+    offerIcon: <CopyOutlined />,
+    modeIcon: <GlobalOutlined />
+  }, {
+    offer: "Coupon",
+    mode: "Online",
+    image: "./Images/flipkart.png",
+    title: "Sitewide Savings: up to 50% off + extra 20% off £50+ purchase!",
+    viewAll: "view all offers (24)",
+    brand: "Flipkart",
+    offerIcon: <CopyOutlined />,
+    modeIcon: <GlobalOutlined />
+  }
+];
