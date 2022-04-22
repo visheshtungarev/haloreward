@@ -1,20 +1,23 @@
 import React from "react";
-import { Row, Button, Input, Col, Select } from "antd";
+import { Row, Button, Input, Col } from "antd";
 import "./index.css";
+import TopMenu from "../../TopMenu/TopMenu";
 
 const { Search } = Input;
-const { Option } = Select;
 
 const Index = () => {
   return (
     <>
-      <Row className="header_container webview" align="middle" justify="space-around">
+      <Row className="header_container webview" align="middle" justify="space-between">
         <Col>
           <img width={100} src="./Images/logo.png" />
         </Col>
         <Col>
           <Row align="middle" justify="center">
-            <img src="/images/categories.svg" />
+
+            <TopMenu />
+
+            {/* <img src="/images/categories.svg" />
             <Select
               suffixIcon={<img src="/images/arrow_up.svg" />}
               className="select_box"
@@ -32,7 +35,7 @@ const Index = () => {
               <Option value="6">option 2</Option>
               <Option value="5">option 1</Option>
               <Option value="6">option 2</Option>
-            </Select>
+            </Select> */}
           </Row>
         </Col>
         <Col>

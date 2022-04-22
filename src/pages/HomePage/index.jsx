@@ -3,12 +3,15 @@ import Header from "../../components/Layout/Header";
 // import Footer from "../../components/Layout/Footer";
 import Carousel from "../../components/Carousel";
 import "./index.css";
-import { Card, Col, Divider, Row, Button } from "antd";
+import { Card, Col, Divider, Row } from "antd";
 import {
   ClockCircleOutlined,
   RightOutlined
 } from "@ant-design/icons";
 import { HomeConstant } from '../../Constants'
+import FeaturedOffers from "../../components/FeaturedOffers/FeaturedOffers";
+import TrendingBrands from "../../components/TrendingBrands/TrendingBrands";
+import PopularOffers from "../../components/PopularOffers/PopularOffers";
 
 // const { Meta } = Card;
 
@@ -135,27 +138,7 @@ const index = () => {
             <RightOutlined />
           </Col>
         </Row>
-        <Row align="middle" className="scrolledView" justify="space-around" gutter={30}>
-          {HomeConstant?.trendingBrands?.map((item, key) =>
-            <Col key={key} className="deals_box trending_brands" span={4}>
-              <Card
-                className="deals_container"
-                actions={[
-
-                ]}
-              >
-                <>
-                  <img className="dealicon " src={item.image} />
-                  <p className="deals_title text-center">{item.title}</p>
-                </>
-
-                <Row key="cashback" className="cashback_info">
-                  upto 11% cashback
-                </Row>
-              </Card>
-            </Col>
-          )}
-        </Row>
+        <TrendingBrands span={4} />
 
       </div>
       <div className="list_view themeBg">
@@ -170,46 +153,7 @@ const index = () => {
             <RightOutlined />
           </Col>
         </Row>
-        <Row align="middle" className="scrolledView" justify="space-around" gutter={30}>
-          {HomeConstant?.featureOffers?.map((item, key) =>
-            <Col key={key} className="deals_box featuredOffers" span={8}>
-              <Card
-                className="deals_container"
-                actions={[
-
-                ]}
-              >
-                <>
-                  <div className="badges">
-                    <Row className="deals_offer mr-md-3">
-                      <Col className="deals_offer_title">
-                        {item.offer}
-                      </Col>
-                      {item.offerIcon}
-                    </Row>
-                    <Row className="deals_mode mr-md-3">
-                      <Col className="deals_offer_title">
-                        {item.mode}
-                      </Col>
-                      {item.modeIcon}
-                    </Row>
-                  </div>
-                  <Row className="w-100 d-flex align-items-center" justify="">
-                    <img className="dealicon_img_frame" src={item.image} />
-
-                    <h5 className=" pl-3 my-0 ">{item.brand}</h5>
-                  </Row>
-                  <p className="deals_title">{item.title}</p>
-                </>
-                <Row key="time" className="featured_offer_action mb-3">
-                  <span>{item.time}</span>
-                </Row>
-                <Button type="primary" block>Go to site</Button>
-
-              </Card>
-            </Col>
-          )}
-        </Row>
+        <FeaturedOffers />
 
       </div>
 
@@ -225,54 +169,7 @@ const index = () => {
             <RightOutlined />
           </Col>
         </Row>
-        <Row align="middle" className="scrolledView" justify="space-around" gutter={30}>
-          {HomeConstant?.popularOffers?.map((item, key) =>
-            <Col key={key} className="deals_box featuredOffers mb-4" span={12}>
-              <Card
-                className="deals_container popularOffers"
-                actions={[
-
-                ]}
-              >
-                <div className="d-flex">
-                  <div>
-                    <img className="dealicon_img_frame_lg" src={item.image} />
-                  </div>
-                  <div>
-                    <div>
-                      <div className="w-100 d-flex align-items-center justify-content-between">
-                        <div className="d-flex">
-                          <Row className="deals_offer">
-                            <Col className="deals_offer_title">
-                              {item.offer}
-                            </Col>
-                            {item.offerIcon}
-                          </Row> &nbsp;&nbsp;
-                          <Row className="deals_mode">
-
-                            <Col className="deals_offer_title">
-                              {item.mode}
-                            </Col>
-                            {item.modeIcon}
-                          </Row>
-                        </div>
-                        <p className="mb-0 viewAllOffer">{item.viewAll}</p>
-                      </div>
-                      <div>
-                        <img className="dealicon_img_frame_lg_mobile" src={item.image} />
-                      </div>
-                      <p className="deals_title">{item.title}</p>
-                    </div>
-                    <Row key="time" className="featured_offer_action ">
-                      <span>{item.time}</span>
-                    </Row>
-                    <Button type="primary" className="px-5">Reveal Code</Button>
-                  </div>
-                </div>
-              </Card>
-            </Col>
-          )}
-        </Row>
+        <PopularOffers />
 
       </div>
       {/* <Footer /> */}
