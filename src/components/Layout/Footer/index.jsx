@@ -11,7 +11,7 @@ export const Index = () => {
     <footer>
       <div className="list_view themeBg mt-0 pt-4">
         <Row className="mt-4">
-          <Col span={6} className="px-md-5">
+          <Col md={6} className="px-md-5 visibledesktop">
             <h5 className="text-white">Download our app</h5>
 
             <Form className="mt-4">
@@ -31,9 +31,9 @@ export const Index = () => {
               </Col>
             </Row>
           </Col>
-          <Col span={18} >
+          <Col md={18} xs={24}>
             <Row>
-              <Col span={6}>
+              <Col md={6} xs={12}>
                 <p className="text-yellow">About</p>
                 <ul>
                   <li>
@@ -59,7 +59,7 @@ export const Index = () => {
                   </li>
                 </ul>
               </Col>
-              <Col span={6}>
+              <Col md={6} xs={12}>
                 <p className="text-yellow">Know more </p>
                 <ul>
                   <li>
@@ -79,7 +79,7 @@ export const Index = () => {
                   </li>
                 </ul>
               </Col>
-              <Col span={6}>
+              <Col md={6} xs={12}>
                 <p className="text-yellow">Rewards</p>
                 <ul>
                   <li>
@@ -96,7 +96,7 @@ export const Index = () => {
                   </li>
                 </ul>
               </Col>
-              <Col span={6}>
+              <Col md={6} xs={12}>
                 <p className="text-yellow">Categories</p>
                 <ul>
                   <li>
@@ -119,14 +119,33 @@ export const Index = () => {
               </Col>
             </Row>
           </Col>
+          <Col md={6} xs={24} className="px-md-5 visiblemobile">
+            <h5 className="text-white">Download our app</h5>
 
-          <Col span={18} className="mt-5">
+            <Form className="mt-4">
+              <div className="customInputGroup">
+                <span className="countryCode">(+44)</span>
+                <input type="text" placeHolder="Enter mobile phone number" />
+                <button><img src="/images/arrow_next.svg" height={15} /></button>
+              </div>
+            </Form>
+
+            <Row gutter={10} className="mt-4">
+              <Col span={10} className="px-2">
+                <img src="/images/gplay.png" className="w-100" />
+              </Col>
+              <Col span={10} className="px-2">
+                <img src="/images/appstore.png" className="w-100" />
+              </Col>
+            </Row>
+          </Col>
+          <Col md={18} xs={24} className="mt-5">
             <Row>
               <Link to="#" className="fw-bold text-white mr-5">Advertising Disclosure</Link>
               <p className="text-white mb-0">© 2021 Ebates Performance Marketing Inc., d/b/a HalloRewards</p>
             </Row>
           </Col>
-          <Col span={6} className="mt-5 text-right">
+          <Col md={6} xs={24} className="mt-5 text-md-right text-center">
             <Link to="#" className="ml-3"><img src="/images/facebook.png" /></Link>
             <Link to="#" className="ml-3"><img src="/images/instagram.png" /></Link>
             <Link to="#" className="ml-3"><img src="/images/youtube.png" /></Link>

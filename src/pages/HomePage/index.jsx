@@ -54,27 +54,29 @@ const index = () => {
     <div className="home_container">
       <Header />
       <Row align="middle" className="carousel_container">
-        <Col xs={{ span: 10 }}>
+        <Col lg={{ span: 10 }} xs={{ span: 24 }} className="mb-4">
           <Carousel className="leftSlider" list={HomeConstant.offerList} cardUI={item => offerCard(item)} />
         </Col>
-        <Col xs={{
-          span: 8
-        }} className="middle_carousel">
-          <Carousel className="centerSlider" list={HomeConstant.giftList} cardUI={item => giftCard(item)} />
+        <Col lg={{ span: 8 }} xs={{ span: 24 }}>
+          <div className="middle_carousel px-lg-3 mb-4">
+            <Carousel className="centerSlider" list={HomeConstant.giftList} cardUI={item => giftCard(item)} />
+          </div>
         </Col>
-        <Col xs={{ span: 5 }}>
-          <Card className="promoted_card">
-            <h4 className="">Promoted brands</h4>
-            {HomeConstant.promoList.map(item =>
-              <div className="promo_bar" key={item.title}>
-                <img className="promo_icon" src={item.icon} />
-              </div>
-            )}
+        <Col lg={{ span: 6 }} xs={{ span: 24 }}>
+          <Card className="promoted_card promoted_brands mb-4">
+            <h4 className="promotedBrandHeading">Promoted brands</h4>
+            <div>
+              {HomeConstant.promoList.map(item =>
+                <div className="promo_bar" key={item.title}>
+                  <img className="promo_icon" src={item.icon} />
+                </div>
+              )}
+            </div>
           </Card>
         </Col>
       </Row>
       <div className="list_view">
-        <Row className="list_bar" align="middle" justify="space-between">
+        <Row className="list_bar " align="middle" justify="space-between">
           <Col className="list_title">
             Expiring Deals
           </Col>
@@ -85,7 +87,7 @@ const index = () => {
             <RightOutlined />
           </Col>
         </Row>
-        <Row align="middle" justify="space-around" gutter={30}>
+        <Row align="middle" className="scrolledView" justify="space-around" gutter={30}>
           {HomeConstant?.expiringDeals?.map((item, key) =>
             <Col key={key} className="deals_box" span={4}>
               <Card
@@ -133,7 +135,7 @@ const index = () => {
             <RightOutlined />
           </Col>
         </Row>
-        <Row align="middle" justify="space-around" gutter={30}>
+        <Row align="middle" className="scrolledView" justify="space-around" gutter={30}>
           {HomeConstant?.trendingBrands?.map((item, key) =>
             <Col key={key} className="deals_box trending_brands" span={4}>
               <Card
@@ -168,7 +170,7 @@ const index = () => {
             <RightOutlined />
           </Col>
         </Row>
-        <Row align="middle" justify="space-around" gutter={30}>
+        <Row align="middle" className="scrolledView" justify="space-around" gutter={30}>
           {HomeConstant?.featureOffers?.map((item, key) =>
             <Col key={key} className="deals_box featuredOffers" span={8}>
               <Card
@@ -179,13 +181,13 @@ const index = () => {
               >
                 <>
                   <div className="badges">
-                    <Row className="deals_offer">
+                    <Row className="deals_offer mr-md-3">
                       <Col className="deals_offer_title">
                         {item.offer}
                       </Col>
                       {item.offerIcon}
-                    </Row> &nbsp;&nbsp;
-                    <Row className="deals_mode">
+                    </Row>
+                    <Row className="deals_mode mr-md-3">
                       <Col className="deals_offer_title">
                         {item.mode}
                       </Col>
@@ -223,11 +225,11 @@ const index = () => {
             <RightOutlined />
           </Col>
         </Row>
-        <Row align="middle" justify="space-around" gutter={30}>
+        <Row align="middle" className="scrolledView" justify="space-around" gutter={30}>
           {HomeConstant?.popularOffers?.map((item, key) =>
             <Col key={key} className="deals_box featuredOffers mb-4" span={12}>
               <Card
-                className="deals_container"
+                className="deals_container popularOffers"
                 actions={[
 
                 ]}
@@ -247,6 +249,7 @@ const index = () => {
                             {item.offerIcon}
                           </Row> &nbsp;&nbsp;
                           <Row className="deals_mode">
+
                             <Col className="deals_offer_title">
                               {item.mode}
                             </Col>
@@ -254,6 +257,9 @@ const index = () => {
                           </Row>
                         </div>
                         <p className="mb-0 viewAllOffer">{item.viewAll}</p>
+                      </div>
+                      <div>
+                        <img className="dealicon_img_frame_lg_mobile" src={item.image} />
                       </div>
                       <p className="deals_title">{item.title}</p>
                     </div>

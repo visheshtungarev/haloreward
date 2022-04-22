@@ -68,3 +68,22 @@ footer .ant-input-group input::placeholder {
     justify-content: center;
     aspect-ratio: 1/1;
 }
+
+.visibledesktop {
+    display: block;
+}
+
+.visiblemobile {
+    display: none !important;
+}
+
+@media only screen and (max-width: 993px) {
+    .visiblemobile {
+        display: block !important;
+    }
+
+    .visibledesktop {
+        display: none !important;
+    }
+
+}
