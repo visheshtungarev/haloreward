@@ -16,14 +16,14 @@
     left: -2rem;
 }
 
-.menuItem>ul {
+.menuItem ul {
     list-style: none;
     padding-left: 0;
     min-width: 170px;
     padding: 0 .5rem;
 }
 
-.menuItem>ul a {
+.menuItem ul a {
     display: block;
     padding: .4rem;
     color: #000;
@@ -34,7 +34,7 @@
     transition: all .3s;
 }
 
-.menuItem>ul a:hover {
+.menuItem ul a:hover {
     background-color: #eee;
 }
 
@@ -67,11 +67,16 @@
     display: none;
 }
 
-.sub-category:hover, .category:hover+.sub-category {
-    display: block;
+.category+div {
+    display: none;
+
 }
 
-.sub-category:hover+.productMenu {
+.category+div:hover, .category:hover+div {
+    display: flex;
+}
+
+.productMenu:hover~.sub-category, .sub-category+.productMenu:hover, .sub-category:hover+.productMenu {
     display: block;
 }
 

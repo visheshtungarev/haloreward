@@ -40,15 +40,17 @@ export default function TopMenu() {
                     <li><Link to="">Utilities</Link></li>
                     <li><Link to="">Others</Link></li>
                 </ul>
-                <ul className="sub-category">
-                    <li><Link to="">Fashion</Link></li>
-                    <li><Link to="">Footwear</Link></li>
-                    <li><Link to="">Clothing and Apparel</Link></li>
-                    <li><Link to="">Accessories</Link></li>
-                </ul>
-                <div className="productMenu">
-                    <h4 className="fw-bold my-3">Recommended Brands</h4>
-                    <TrendingBrands span={8} />
+                <div>
+                    <ul className="sub-category">
+                        <li><Link to="">Fashion</Link></li>
+                        <li><Link to="">Footwear</Link></li>
+                        <li><Link to="">Clothing and Apparel</Link></li>
+                        <li><Link to="">Accessories</Link></li>
+                    </ul>
+                    <div className="productMenu">
+                        <h4 className="fw-bold my-3">Recommended Brands</h4>
+                        <TrendingBrands span={8} />
+                    </div>
                 </div>
             </div>
         </div>
