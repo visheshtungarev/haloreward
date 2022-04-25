@@ -1,0 +1,48 @@
+.lineinput>.ant-input-affix-wrapper, .lineinput input {
+    border-radius: 0;
+    border-style: solid;
+    border-width: 0px 0px 2px 0px;
+}
+
+.ant-modal-footer {
+    display: none;
+}
+
+.ant-modal-header {
+    border-bottom: 0px solid !important;
+}
+
+span.orDevider:after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 20px;
+    background: rgb(0 0 0 / 10%);
+    margin-left: 10px;
+}
+
+span.orDevider:before {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 20px;
+    background: rgb(0 0 0 / 10%);
+    margin-right: 10px;
+}
+
+.orDevider {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    color: rgb(0 0 0 / 50%);
+}
+
+.ant-modal {
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.ant-modal-content {
+    padding: 0 1.3rem;
+
+}

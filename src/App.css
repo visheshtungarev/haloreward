@@ -2,9 +2,18 @@
   text-align: center;
 }
 
+body {
+  background: #F7F7F7 !important;
+  font-weight: 300;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.fw-bold {
+  font-weight: bold;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -32,10 +41,12 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
+
 p, div, h1, h2, h3, h4, h5, h6 {
-    font-family: 'Lexend' !important;
+  font-family: 'Lexend' !important;
 }
