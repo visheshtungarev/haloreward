@@ -2,6 +2,7 @@ import React from "react";
 import "./index.css";
 import { Card, Col, Row, Button } from "antd";
 import { HomeConstant } from '../../Constants'
+import Badge from "../Badge/Badge";
 
 export default function FeaturedOffers() {
     return (
@@ -16,18 +17,19 @@ export default function FeaturedOffers() {
                     >
                         <>
                             <div className="badges">
-                                <Row className="deals_offer mr-md-3">
-                                    <Col className="deals_offer_title">
-                                        {item.offer}
-                                    </Col>
-                                    {item.offerIcon}
-                                </Row>
-                                <Row className="deals_mode mr-md-3">
-                                    <Col className="deals_offer_title">
-                                        {item.mode}
-                                    </Col>
-                                    {item.modeIcon}
-                                </Row>
+                                <Badge
+                                    position={''}
+                                    badgeType={item.offer}
+                                    badgeText={item.offer}
+                                    badgeIcon={item.offerIcon}
+                                />
+
+                                <Badge
+                                    position={''}
+                                    badgeType={item.mode}
+                                    badgeText={item.mode}
+                                    badgeIcon={item.modeIcon}
+                                />
                             </div>
                             <Row className="w-100 d-flex align-items-center" justify="">
                                 <img className="dealicon_img_frame" src={item.image} />

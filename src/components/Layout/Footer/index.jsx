@@ -17,7 +17,7 @@ export const Index = () => {
             <Form className="mt-4">
               <div className="customInputGroup">
                 <span className="countryCode">(+44)</span>
-                <input type="text" placeHolder="Enter mobile phone number" />
+                <input type="text" placeholder="Enter mobile phone number" />
                 <button><img src="/images/arrow_next.svg" height={15} /></button>
               </div>
             </Form>
@@ -125,7 +125,7 @@ export const Index = () => {
             <Form className="mt-4">
               <div className="customInputGroup">
                 <span className="countryCode">(+44)</span>
-                <input type="text" placeHolder="Enter mobile phone number" />
+                <input type="text" placeholder="Enter mobile phone number" />
                 <button><img src="/images/arrow_next.svg" height={15} /></button>
               </div>
             </Form>

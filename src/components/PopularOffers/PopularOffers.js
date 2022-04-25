@@ -2,6 +2,7 @@ import React from "react";
 import "./index.css";
 import { Card, Col, Row, Button } from "antd";
 import { HomeConstant } from '../../Constants'
+import Badge from "../Badge/Badge";
 
 
 export default function PopularOffers() {
@@ -15,27 +16,26 @@ export default function PopularOffers() {
 
                         ]}
                     >
-                        <div className="d-flex">
+                        <div className="d-flex w-100 ">
                             <div>
                                 <img className="dealicon_img_frame_lg" src={item.image} />
                             </div>
-                            <div>
+                            <div className="flex-grow-1">
                                 <div>
                                     <div className="w-100 d-flex align-items-center justify-content-between">
                                         <div className="d-flex">
-                                            <Row className="deals_offer">
-                                                <Col className="deals_offer_title">
-                                                    {item.offer}
-                                                </Col>
-                                                {item.offerIcon}
-                                            </Row> &nbsp;&nbsp;
-                                            <Row className="deals_mode">
-
-                                                <Col className="deals_offer_title">
-                                                    {item.mode}
-                                                </Col>
-                                                {item.modeIcon}
-                                            </Row>
+                                            <Badge
+                                                position={''}
+                                                badgeType={item.offer}
+                                                badgeText={item.offer}
+                                                badgeIcon={item.offerIcon}
+                                            />
+                                            <Badge
+                                                position={''}
+                                                badgeType={item.mode}
+                                                badgeText={item.mode}
+                                                badgeIcon={item.modeIcon}
+                                            />
                                         </div>
                                         <p className="mb-0 viewAllOffer">{item.viewAll}</p>
                                     </div>

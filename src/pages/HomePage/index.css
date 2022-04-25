@@ -1,7 +1,3 @@
-.home_container {
-    background-color: #E5E5E5;
-}
-
 .ant-carousel .slick-dots li.slick-active button {
     height: 10px !important;
     width: 10px !important;
@@ -170,9 +166,7 @@
     max-width: 100%;
 }
 
-.promoted_card {
-    padding: 0 2rem;
-}
+
 
 .list_view {
     margin: 1rem 4rem;

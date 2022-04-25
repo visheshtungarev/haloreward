@@ -1,17 +1,16 @@
 import React from "react";
-import Header from "../../components/Layout/Header";
-// import Footer from "../../components/Layout/Footer";
 import Carousel from "../../components/Carousel";
 import "./index.css";
 import { Card, Col, Divider, Row } from "antd";
 import {
   ClockCircleOutlined,
-  RightOutlined
 } from "@ant-design/icons";
 import { HomeConstant } from '../../Constants'
 import FeaturedOffers from "../../components/FeaturedOffers/FeaturedOffers";
 import TrendingBrands from "../../components/TrendingBrands/TrendingBrands";
 import PopularOffers from "../../components/PopularOffers/PopularOffers";
+import Badge from "../../components/Badge/Badge";
+import Heading from "../../components/Heading/Heading";
 
 // const { Meta } = Card;
 
@@ -55,7 +54,6 @@ const index = () => {
   };
   return (
     <div className="home_container">
-      <Header />
       <Row align="middle" className="carousel_container">
         <Col lg={{ span: 10 }} xs={{ span: 24 }} className="mb-4">
           <Carousel className="leftSlider" list={HomeConstant.offerList} cardUI={item => offerCard(item)} />
@@ -79,17 +77,11 @@ const index = () => {
         </Col>
       </Row>
       <div className="list_view">
-        <Row className="list_bar " align="middle" justify="space-between">
-          <Col className="list_title">
-            Expiring Deals
-          </Col>
-          <Col className="list_action">
-            <p>
-              View All
-            </p>
-            <RightOutlined />
-          </Col>
-        </Row>
+        <Heading
+          HeadingText="Expiring Deals"
+          actionText="View All"
+          actionLink="/all-offers"
+        />
         <Row align="middle" className="scrolledView" justify="space-around" gutter={30}>
           {HomeConstant?.expiringDeals?.map((item, key) =>
             <Col key={key} className="deals_box" span={4}>
@@ -100,18 +92,20 @@ const index = () => {
                 ]}
               >
                 <>
-                  <Row className="deals_offer">
-                    <Col className="deals_offer_title">
-                      {item.offer}
-                    </Col>
-                    {item.offerIcon}
-                  </Row>
-                  <Row className="deals_mode">
-                    <Col className="deals_offer_title">
-                      {item.mode}
-                    </Col>
-                    {item.modeIcon}
-                  </Row>
+                  <Badge
+                    position={''}
+                    badgeType={item.offer}
+                    badgeText={item.offer}
+                    badgeIcon={item.offerIcon}
+                  />
+
+                  <Badge
+                    position={''}
+                    badgeType={item.mode}
+                    badgeText={item.mode}
+                    badgeIcon={item.modeIcon}
+                  />
+
                   <img className="dealicon" src={item.image} />
                   <p className="deals_title">{item.title}</p>
                 </>
@@ -127,48 +121,31 @@ const index = () => {
 
       </div>
       <div className="list_view">
-        <Row className="list_bar" align="middle" justify="space-between">
-          <Col className="list_title">
-            Trending Brands
-          </Col>
-          <Col className="list_action">
-            <p>
-              View All
-            </p>
-            <RightOutlined />
-          </Col>
-        </Row>
+        <Heading
+          HeadingText="Trending Brands"
+          actionText="View All"
+          actionLink="/all-offers"
+        />
         <TrendingBrands span={4} />
 
       </div>
       <div className="list_view themeBg">
-        <Row className="list_bar" align="middle" justify="space-between">
-          <Col className="list_title text-white">
-            Featured Offers
-          </Col>
-          <Col className="list_action text-white">
-            <p>
-              View All
-            </p>
-            <RightOutlined />
-          </Col>
-        </Row>
+        <Heading
+          HeadingText="Featured Offers"
+          actionText="View All"
+          actionLink="/all-offers"
+          color="text-white"
+        />
         <FeaturedOffers />
 
       </div>
 
       <div className="list_view">
-        <Row className="list_bar" align="middle" justify="space-between">
-          <Col className="list_title ">
-            Popular Offers
-          </Col>
-          <Col className="list_action">
-            <p>
-              View All
-            </p>
-            <RightOutlined />
-          </Col>
-        </Row>
+        <Heading
+          HeadingText="Popular Offers"
+          actionText="View All"
+          actionLink="/all-offers"
+        />
         <PopularOffers />
 
       </div>

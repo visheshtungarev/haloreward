@@ -3,13 +3,17 @@
 }
 
 body {
-  background: #E5E5E5 !important;
+  background: #F7F7F7 !important;
   font-weight: 300;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.fw-bold {
+  font-weight: bold;
 }
 
 @media (prefers-reduced-motion: no-preference) {
