@@ -3,8 +3,6 @@ import Heading from '../../components/Heading/Heading'
 import PopularOffers from '../../components/PopularOffers/PopularOffers'
 import {
     CreditCardOutlined
-    // ShopOutlined,
-    // ShoppingOutlined
 } from "@ant-design/icons";
 import Breadcurms from '../../components/Breadcrums/Breadcurms';
 import { Row, Col, Card } from 'antd';
@@ -118,6 +116,8 @@ export default function AllOffers() {
                     actionText="View All"
                     actionLink="/all-brands"
                 />
+
+
                 <PopularOffers />
             </div>
         </div>

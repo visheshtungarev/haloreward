@@ -7,6 +7,7 @@ import AllPopularOffers from "./pages/PopularOffers/AllPopularOffers";
 import Header from "./components/Layout/Header";
 import AllOffers from "./pages/AllOffers/AllOffers";
 import BrandCategory from "./pages/Brand/BrandCategory";
+import BrandDetails from "./pages/OfferListing/BrandDetails";
 
 const RouterApp = () => {
 
@@ -19,6 +20,8 @@ const RouterApp = () => {
         <Route path="/popular-offers" element={<AllPopularOffers />} />
         <Route path="/all-offers" element={<AllOffers />} />
         <Route path="/all-brands/category" element={< BrandCategory />} />
+        <Route path="/brand" element={<BrandDetails />} />
+
       </Routes>
       <Footer />
     </React.Fragment>
