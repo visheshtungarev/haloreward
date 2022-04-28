@@ -13,3 +13,28 @@
     color: #000;
     font-weight: 500;
 }
+
+.fixed-top-right {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+img.dealicon_img_frame {
+    border: 0px solid #ddd;
+    /* padding: 5px; */
+}
+
+.rounded1 {
+    border-radius: 1rem;
+}
+
+@media only screen and (max-width: 993px) {
+    img.dealicon_img_frame {
+        border: 1px solid #ddd;
+        padding: 5px;
+    }
+
+
+
+}

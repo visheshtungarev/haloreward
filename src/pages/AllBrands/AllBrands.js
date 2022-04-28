@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./index.css";
 import { Col, Row, Card, Select } from "antd";
 
@@ -19,52 +19,52 @@ import SideBar from "../../components/Sidebar/SideBar";
 
 const sidebarData = [
     {
-        title: 'Accessories', link: '/accessories'
+        title: 'Accessories', link: ''
     },
     {
-        title: 'Auto & Tires', link: '/Auto-and-Tires'
+        title: 'Auto & Tires', link: ''
     },
     {
-        title: 'Baby & Kids Gear', link: '/Baby & Kids Gear'
+        title: 'Baby & Kids Gear', link: ''
     },
     {
-        title: 'Books & Media', link: '/Books & Media'
+        title: 'Books & Media', link: ''
     },
     {
-        title: 'Clothing', link: '/Clothing'
+        title: 'Clothing', link: ''
     },
     {
-        title: 'Electronics', link: '/Electronics'
+        title: 'Electronics', link: ''
     },
     {
-        title: 'Events & Activities', link: '/Events & Activities'
+        title: 'Events & Activities', link: ''
     },
     {
-        title: 'Flowers & Florists', link: '/Flowers & Florists'
+        title: 'Flowers & Florists', link: ''
     },
     {
-        title: 'Food & Restaurants', link: '/Food & Restaurants'
+        title: 'Food & Restaurants', link: ''
     },
     {
-        title: 'Gifts & Occasions', link: '/Gifts & Occasions'
+        title: 'Gifts & Occasions', link: ''
     },
     {
-        title: 'Pet Supplies', link: '/Pet Supplies'
+        title: 'Pet Supplies', link: ''
     },
     {
-        title: 'Books & Media', link: '/Books & Media'
+        title: 'Books & Media', link: ''
     },
     {
-        title: 'Food & Restaurants', link: '/Food & Restaurants'
+        title: 'Food & Restaurants', link: ''
     },
     {
-        title: 'Gifts & Occasions', link: '/Gifts & Occasions'
+        title: 'Gifts & Occasions', link: ''
     },
     {
-        title: 'Health & Beauty', link: '/Health & Beauty'
+        title: 'Health & Beauty', link: ''
     },
     {
-        title: 'Events & Activities', link: '/Events & Activities'
+        title: 'Events & Activities', link: ''
     }
 
 ]
@@ -131,6 +131,17 @@ const AllBrands = () => {
     const { Option } = Select;
     const [sideMenuItems,] = useState(sidebarData)
     const [dataArr,] = useState(allTredingBrands)
+    const [openSidePanel, setOpenSidePanel] = useState(false)
+
+    const closeSidebar = () => {
+        !openSidePanel ? setOpenSidePanel(true) : setOpenSidePanel(false)
+    }
+    useEffect(() => {
+        console.log(window.innerWidth)
+        if (window.innerWidth > 993) {
+            setOpenSidePanel(true)
+        }
+    }, [])
     return (
         <div className="home_container">
             <Row align="middle" className="list_view mb-0 pb-0">
@@ -177,6 +188,7 @@ const AllBrands = () => {
                     HeadingText="Brands"
                     filter={
                         <>
+                            <button onClick={() => closeSidebar()} className="filterBtn">Filter</button>
                             <Select defaultValue="Any Reward Type" allowClear>
                                 <Option value="AnyRewardType">Any Reward Type</Option>
                             </Select>
@@ -188,40 +200,53 @@ const AllBrands = () => {
                 />
 
                 <Row gutter={5}>
-                    <Col span={6}>
-                        <SideBar
-                            type='list'
-                            mainTitle='Filter'
-                            data={sideMenuItems}
-                        />
+                    <Col span={24} lg={{ span: 6 }}>
+                        {
+                            openSidePanel ?
+                                <SideBar
+                                    closePanel={() => closeSidebar()}
+                                    type='list'
+                                    mainTitle='Filter'
+                                    data={sideMenuItems}
+                                />
+                                : ''
+                        }
+
                     </Col>
-                    <Col span={18}>
+                    <Col span={24} lg={{ span: 18 }}>
                         <Row align="middle" justify="space-around" >
                             {
                                 dataArr && dataArr.map((item, i) => {
                                     return (
 
-                                        <Col key={i} className="deals_box featuredOffers mb-4" span={24}>
+                                        <Col key={i} className=" rounded1 overflow-hidden featuredOffers mb-4" span={24}>
                                             <Card className="deals_container popularOffers">
-                                                <Row align="middle" justify="space-between " >
-                                                    <Row align="middle" >
-                                                        <img className="dealicon_img_frame" src={item.image} />
-
-                                                        <p className="deals_title ml-3 my-0">{item.title}</p>
-                                                    </Row>
+                                                <Row align="middle" className="w-100 flex-nowrap" >
 
                                                     <div>
-                                                        <p className="deals_content ml-3 mb-0">{item.content}</p>
+                                                        <img className="dealicon_img_frame" src={item.image} />
                                                     </div>
-                                                    <Row key="time" className="featured_offer_action ">
-                                                        <span>{item.time}</span>
-                                                    </Row>
-                                                    <Badge
-                                                        position={''}
-                                                        badgeType={item?.modeType}
-                                                        badgeText={item?.modeText}
-                                                        badgeIcon={item.modeIcon}
-                                                    />
+                                                    <Col className="flex-grow-1">
+                                                        <Row align="middle" justify="around">
+                                                            <Col span={24} md={{ span: 6 }} className="d-flex align-items-center">
+                                                                <p className="deals_title ml-3 my-0">{item.title}</p>
+
+                                                            </Col>
+                                                            <Col span={24} md={{ span: 18 }} className="flex-grow-1">
+
+                                                                <p className="deals_content ml-3 mb-0">{item.content}</p>
+                                                            </Col>
+
+                                                        </Row>
+                                                    </Col>
+                                                    <div className="fixed-top-right">
+                                                        <Badge
+                                                            position={''}
+                                                            badgeType={item?.modeType}
+                                                            badgeText={item?.modeText}
+                                                            badgeIcon={item.modeIcon}
+                                                        />
+                                                    </div>
                                                 </Row>
                                             </Card>
                                         </Col>

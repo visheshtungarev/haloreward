@@ -8,7 +8,7 @@ import "./index.css";
 export default function Heading({ HeadingText, actionText, actionLink, filter, color }) {
 
     return (
-        <Row className="list_bar" align="middle" justify="space-between">
+        <Row className="headingFancy" align="middle" justify="space-between">
             {
                 HeadingText ?
                     <Col className={color ? `list_title ${color}` : `list_title`}>
@@ -25,7 +25,7 @@ export default function Heading({ HeadingText, actionText, actionLink, filter, c
             }
             {
                 filter ?
-                    <Col >
+                    <Col className='filterSection'>
                         {filter}
                     </Col> : ''
             }

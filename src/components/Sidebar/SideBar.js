@@ -1,16 +1,24 @@
 import React, { } from 'react'
 import { Row, Col, Card } from 'antd'
 import { Link } from 'react-router-dom'
-export default function SideBar({ type, mainTitle, subTitle, data }) {
-    console.log(data[0].title)
+import "./index.css"
+export default function SideBar({ type, mainTitle, subTitle, data, closePanel }) {
+
+
     return (
-        <Row>
+        <Row className={mainTitle}>
             <Col className="deals_box featuredOffers mb-4" span={24}>
                 <Card className="deals_container popularOffers">
                     {
                         mainTitle ?
                             <>
-                                <h5 className="fw-bold mb-1">{mainTitle}</h5>
+                                <div className='d-flex'>
+                                    <h5 className="fw-bold mb-1 flex-grow-1">{mainTitle}</h5>
+                                    <span onClick={() => closePanel()} className="closeBtn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-x-lg" viewBox="0 0 16 16">
+                                        <path fillRule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z" />
+                                        <path fillRule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z" />
+                                    </svg></span>
+                                </div>
                                 <hr />
                             </>
                             : ''
@@ -21,8 +29,7 @@ export default function SideBar({ type, mainTitle, subTitle, data }) {
                             <ul className="sideMenu">
                                 {
                                     data && data.map((item, i) => {
-                                        return (<li key={i}><Link to={item.link}>{item.title}</Link></li>)
-                                        // console.log(item, '+++++' + i)
+                                        return (<li key={i} ><Link to={item.link}>{item.title}</Link></li>)
                                     })
                                 }
 
