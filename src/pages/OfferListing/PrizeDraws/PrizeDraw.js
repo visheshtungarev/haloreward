@@ -6,6 +6,7 @@ import { Row, Col, Card, Button } from 'antd'
 import "./index.css";
 import { Link } from 'react-router-dom';
 import Heading from '../../../components/Heading/Heading';
+import ModalComp from '../../../components/Modals/ModalComp';
 
 // import Badge from '../../../components/Badge/Badge';
 
@@ -74,9 +75,48 @@ const allTredingOffers = [
 
 export default function PrizeDraw() {
     const [dataArr,] = useState(allTredingOffers)
-    console.log(dataArr)
+
+    const [isModalVisible, setIsModalVisible] = useState(false);
+
+    const showModal = () => {
+        setIsModalVisible(true);
+    };
+
+    const handleOk = () => {
+        setIsModalVisible(false);
+    };
+
+    const handleCancel = () => {
+        setIsModalVisible(false);
+    };
+
     return (
         <>
+            <ModalComp
+                // modalTitle={'/Images/'}
+                isModalVisible={isModalVisible}
+                handleOk={handleOk}
+                handleCancel={handleCancel}
+                ModalContent={
+                    <div className="px-md-5 px-3">
+                        <div className="text-center">
+                            <div className="smLogo mx-auto">
+                                <img src="/Images/myntra.png" />
+                            </div>
+                            <h6 className=" my-3">Myntra</h6>
+                            <h6 style={{ fontWeight: 300 }} className="text-dark">Win a chance to meet the Manchester
+                                United Team</h6>
+                            <img className="my-4" src="Images/prizeDraw_img.svg" height="150" />
+                            <h5 className="fw-bold purpleText">You have entered this prize draw!</h5>
+                            <h6 style={{ fontWeight: 300 }} className="text-muted mt-3">We will notify all the winners by
+                                <b className='d-block text-dark'>Nov 10, 2021</b>
+                            </h6>
+                        </div>
+                    </div>
+                }
+            />
+
+
             <Heading
                 HeadingText="Prize Draws"
             // actionText="View All"
@@ -115,7 +155,7 @@ export default function PrizeDraw() {
                                             <Link to='' className='d-flex align-items-center mr-3'> Show Details</Link>
                                             <span className='d-flex align-items-center'> <FiClock /> &nbsp; {item.time}</span>
                                         </Row>
-                                        <Button type="primary" className="px-5 ml-auto">Enter draw</Button>
+                                        <Button type="primary" className="px-md-5 px-3 ml-auto" onClick={showModal}>Enter draw</Button>
 
                                     </Row>
                                 </Row>

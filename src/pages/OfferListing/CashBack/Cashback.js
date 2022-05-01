@@ -4,7 +4,7 @@ import { Row, Col, Card, Button } from 'antd'
 import "./index.css"
 import { Link } from 'react-router-dom'
 import Heading from '../../../components/Heading/Heading'
-
+import ModalComp from '../../../components/Modals/ModalComp'
 const allTredingOffers = [
     {
 
@@ -62,13 +62,46 @@ const allTredingOffers = [
 ]
 export default function Cashback() {
     const [dataArr,] = useState(allTredingOffers)
-    console.log(dataArr)
+
+    const [isModalVisible, setIsModalVisible] = useState(false);
+
+    const showModal = () => {
+        setIsModalVisible(true);
+    };
+
+    const handleOk = () => {
+        setIsModalVisible(false);
+    };
+
+    const handleCancel = () => {
+        setIsModalVisible(false);
+    };
     return (
         <>
+            <ModalComp
+                // modalTitle={'/Images/'}
+                isModalVisible={isModalVisible}
+                handleOk={handleOk}
+                handleCancel={handleCancel}
+                ModalContent={
+                    <div className="px-md-5 px-3">
+                        <div className="text-center">
+                            <div className="smLogo mx-auto">
+                                <img src="/Images/myntra.png" />
+                            </div>
+                            <h6 className=" my-3">Myntra</h6>
+                            <h6 style={{ fontWeight: 300 }} className="text-muted">One second please, we are just opening
+                                Myntra site for you....</h6>
+                            <img className="my-4" src="Images/redirecting.svg" height="150" />
+                            <h5 className="fw-bold purpleText">Your code has been successfully
+                                copied to the clipboard</h5>
+                        </div>
+                    </div>
+                }
+            />
             <Heading
                 HeadingText="Cashback"
-            // actionText="View All"
-            // actionLink="/Trending-offers"
+
             />
 
             <Row align="middle" className="scrolledView" justify="space-around" gutter={30}>
@@ -108,7 +141,7 @@ export default function Cashback() {
                                             <Link to='' className='d-flex align-items-center mr-3'> Show Details</Link>
                                             {/* <span className='d-flex align-items-center'> <FiClock /> &nbsp; {item.time}</span> */}
                                         </Row>
-                                        <Button type="primary" className="px-3 ml-auto">Reveal Code</Button>
+                                        <Button type="primary" className="px-md-5 px-3 ml-auto" onClick={() => showModal()}>Go to site</Button>
 
                                     </Row>
                                 </Row>

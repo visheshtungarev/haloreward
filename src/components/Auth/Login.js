@@ -6,17 +6,17 @@ import { Link } from 'react-router-dom'
 
 export default function Login() {
     return (
-        <Form>
+        <Form autoComplete='new-password'>
             <div className='mb-4'>
                 <label>Email</label>
                 <div className='lineinput'>
-                    <Input placeholder="Email" autoComplete='email' type={'email'} />
+                    <Input placeholder="Email" autoComplete="new-password" type={'email'} />
                 </div>
             </div>
             <div className='mb-4'>
                 <label>Password</label>
                 <div className='lineinput'>
-                    <Input placeholder="Password" autoComplete='password' type={'password'} suffix={<EyeOutlined />} />
+                    <Input placeholder="Password" autoComplete="new-password" type={'password'} suffix={<EyeOutlined />} />
                 </div>
             </div>
             <div className='mb-4'>
@@ -32,7 +32,7 @@ export default function Login() {
                 <a href='google.com' target="_blank"><img src='/Images/google.svg' height={40} /></a> &nbsp;
                 <a href='facebook.com' target="_blank"><img src='/Images/facebook.svg' height={40} /></a>
             </div>
-            <div className='py-md-5 py-0'></div>
+            <div className='py-md-4 py-0'></div>
             <div className='mb-4 text-center fw-bold'>
                 Don’t have an account yet? &nbsp;
                 <Link to="">Register</Link>

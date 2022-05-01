@@ -113,24 +113,26 @@ export default function BrandDetails() {
             <p className='text-white d-flex align-items-center'>upto 11% cashback <span className='deviderWhite'></span> 24 coupons <span className='deviderWhite'></span> 2 prize draws</p>
 
             <Tabs defaultActiveKey="1" onChange={callback}>
-              <TabPane tab={<div className='d-flex align-items-center'><img src='/Images/prizeDraw.svg' height={40} /> <h5 className='fw-bold mb-0'>PrizeDraw</h5></div>} key="1">
+              <TabPane tab={<div className='d-flex align-items-center py-2'><img src='/Images/cashback.svg' height={40} /> &nbsp; <h6 className='mb-0'>Cashbacks</h6></div>} key="2">
 
-                <PrizeDraw />
-
-              </TabPane>
-              <TabPane tab={<div className='d-flex align-items-center'><img src='/Images/cashback.svg' height={40} /> <h5 className='fw-bold mb-0'>Cashbacks</h5></div>} key="2">
-
-                <div className='onCardOfferBanner'>
-                  <h3 className='mb-2'>On Card Offers</h3>
+                <div className='onCardOfferBanner mb-4'>
+                  <h4 className='mb-2'>On Card Offers</h4>
                   <p className='mb-4'>Upfront cost must be £50+</p>
-                  <h2 className='d-inline-block'>10% OFF </h2> <small>Terms and Conditions*</small>
+                  <h3 className='d-inline-block'>10% OFF </h3> <small>Terms and Conditions*</small>
 
                 </div>
 
                 <Cashback />
               </TabPane>
-              <TabPane tab={<div className='d-flex align-items-center'><img src='/Images/coupon.svg' height={40} /> <h5 className='fw-bold mb-0'>Coupon</h5></div>} key="3">
+
+              <TabPane tab={<div className='d-flex align-items-center py-2'><img src='/Images/coupon.svg' height={40} /> &nbsp; <h6 className='mb-0'>Coupon</h6></div>} key="3">
                 <Coupon />
+              </TabPane>
+
+              <TabPane tab={<div className='d-flex align-items-center py-2'><img src='/Images/prizeDraw.svg' height={40} /> &nbsp; <h6 className='mb-0'>PrizeDraw</h6></div>} key="1">
+
+                <PrizeDraw />
+
               </TabPane>
             </Tabs>
           </Col>
@@ -144,7 +146,7 @@ export default function BrandDetails() {
         />
         <Row align="middle" className="scrolledView" justify="space-around" gutter={30}>
           {dataArr && dataArr.map((item, i) =>
-            <Col key={i} className="deals_box trending_brands mb-3 px-2 text-left" span={4}>
+            <Col key={i} className="deals_box trending_brands mb-3 text-left" span={4}>
               <Card
                 className="deals_container">
                 <Badge

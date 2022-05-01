@@ -61,6 +61,7 @@ export const giftList = [
     description: "simply make the purchase and watch your wallet fill"
   }
 ];
+
 export const expiringDeals = [
   {
     offer: "Coupon",

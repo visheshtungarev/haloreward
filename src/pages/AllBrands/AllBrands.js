@@ -161,9 +161,9 @@ const AllBrands = () => {
                     actionText="View All"
                     actionLink="/all-brands"
                 />
-                <Row align="middle" className="scrolledView" justify="space-around" gutter={30}>
+                <Row align="middle" className="scrolledView" justify="space-around" gutter={20}>
                     {dataArr && dataArr.map((item, i) =>
-                        <Col key={i} className="deals_box trending_brands mb-3 px-2" span={4}>
+                        <Col key={i} className="deals_box trending_brands mb-3 " span={4}>
                             <Card
                                 className="deals_container">
                                 <Badge
@@ -199,7 +199,7 @@ const AllBrands = () => {
                     }
                 />
 
-                <Row gutter={5}>
+                <Row justify="space-around" gutter={20}>
                     <Col span={24} lg={{ span: 6 }}>
                         {
                             openSidePanel ?
@@ -219,8 +219,8 @@ const AllBrands = () => {
                                 dataArr && dataArr.map((item, i) => {
                                     return (
 
-                                        <Col key={i} className=" rounded1 overflow-hidden featuredOffers mb-4" span={24}>
-                                            <Card className="deals_container popularOffers">
+                                        <Col key={i} className="  overflow-hidden featuredOffers mb-4" span={24}>
+                                            <Card className="deals_container popularOffers rounded1">
                                                 <Row align="middle" className="w-100 flex-nowrap" >
 
                                                     <div>

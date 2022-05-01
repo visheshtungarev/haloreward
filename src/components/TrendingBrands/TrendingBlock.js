@@ -5,7 +5,7 @@ import { Card, Col, Row } from "antd";
 
 export default function TrendingBlock({ span, brandImage, brandOfferText, brandTitle }) {
     return (
-        <Col className="deals_box trending_brands mb-3 px-2" span={span}>
+        <Col className="deals_box trending_brands mb-3" span={span}>
             <Card
                 className="deals_container">
 

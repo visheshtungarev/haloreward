@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { Row, Button, Modal, Input, Col } from "antd";
+import { Row, Button, Input, Col } from "antd";
 import "./index.css";
 import TopMenu from "../../TopMenu/TopMenu";
 import Login from '../../Auth/Login';
+import ModalComp from '../../Modals/ModalComp';
 const { Search } = Input;
 
 const Index = () => {
@@ -81,10 +82,16 @@ const Index = () => {
           <Search size="large" placeholder="Search stores" enterButton />
         </Col>
       </Row>
+      <ModalComp
+        modalTitle={'Welcome!'}
+        isModalVisible={isModalVisible}
+        handleOk={handleOk}
+        handleCancel={handleCancel}
+        ModalContent={
+          <Login />
+        }
+      />
 
-      <Modal title={<img src='/Images/welcome_img.svg' height={40} className="mt-3" />} visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
-        <Login />
-      </Modal>
     </>
   );
 };

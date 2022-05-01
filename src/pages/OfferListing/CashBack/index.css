@@ -15,3 +15,21 @@
     color: #1890ff;
 
 }
+
+.smLogo {
+    height: 50px;
+    width: 50px;
+    border-radius: .5rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.smLogo>img {
+    height: 100%;
+    width: 100%;
+    padding: .3rem;
+    object-fit: contain;
+}
+
+.purpleText {
+    color: #8338EC;
+}

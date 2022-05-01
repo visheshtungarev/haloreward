@@ -2,13 +2,13 @@ import React, { } from 'react'
 import { Row, Col, Card } from 'antd'
 import { Link } from 'react-router-dom'
 import "./index.css"
-export default function SideBar({ type, mainTitle, subTitle, data, closePanel }) {
+export default function SideBar({ type, mainTitle, subTitle, data, closePanel, devider }) {
 
 
     return (
         <Row className={mainTitle}>
-            <Col className="deals_box featuredOffers mb-4" span={24}>
-                <Card className="deals_container popularOffers">
+            <Col className="  overflow-hidden featuredOffers mb-4" span={24}>
+                <Card className="deals_container popularOffers rounded1">
                     {
                         mainTitle ?
                             <>
@@ -26,7 +26,7 @@ export default function SideBar({ type, mainTitle, subTitle, data, closePanel })
 
                     {
                         type === 'list' ?
-                            <ul className="sideMenu">
+                            <ul className={devider ? 'sideMenu devider' : 'sideMenu'}>
                                 {
                                     data && data.map((item, i) => {
                                         return (<li key={i} ><Link to={item.link}>{item.title}</Link></li>)

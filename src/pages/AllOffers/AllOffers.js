@@ -90,7 +90,7 @@ export default function AllOffers() {
                 />
                 <Row align="middle" className="scrolledView" justify="space-around" gutter={30}>
                     {dataArr && dataArr.map((item, i) =>
-                        <Col key={i} className="deals_box trending_brands mb-3 px-2 text-left" span={4}>
+                        <Col key={i} className="deals_box trending_brands mb-3 text-left" span={4}>
                             <Card
                                 className="deals_container">
                                 <Badge

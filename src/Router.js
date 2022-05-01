@@ -8,6 +8,11 @@ import Header from "./components/Layout/Header";
 import AllOffers from "./pages/AllOffers/AllOffers";
 import BrandCategory from "./pages/Brand/BrandCategory";
 import BrandDetails from "./pages/OfferListing/BrandDetails";
+import Coupon from "./pages/Coupon/Coupon";
+import Cashback from "./pages/Cashback/Cashback";
+import PrizeDraw from "./pages/PrizeDraw/PrizeDraw";
+import OnCardoffer from "./pages/OnCardOffer/OnCardOffer";
+import About from "./pages/About/About";
 
 const RouterApp = () => {
 
@@ -21,6 +26,11 @@ const RouterApp = () => {
         <Route path="/all-offers" element={<AllOffers />} />
         <Route path="/all-brands/category" element={< BrandCategory />} />
         <Route path="/brand" element={<BrandDetails />} />
+        <Route path="/coupon" element={<Coupon />} />
+        <Route path="/cashback" element={<Cashback />} />
+        <Route path="/prizedraw" element={<PrizeDraw />} />
+        <Route path="/oncardOffer" element={<OnCardoffer />} />
+        <Route path="/about" element={<About />} />
 
       </Routes>
       <Footer />
