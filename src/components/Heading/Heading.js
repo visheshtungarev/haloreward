@@ -5,16 +5,21 @@ import {
 } from "@ant-design/icons";
 import { Link } from 'react-router-dom';
 import "./index.css";
-export default function Heading({ HeadingText, actionText, actionLink, filter, color }) {
+export default function Heading({ HeadingText, subHeading, actionText, actionLink, filter, color }) {
 
     return (
-        <Row className="headingFancy" align="middle" justify="space-between">
+        <Row className="headingFancy mt-4" align="middle" justify="space-between">
             {
                 HeadingText ?
                     <Col className={color ? `list_title ${color}` : `list_title`}>
                         {HeadingText}
+                        {
+                            subHeading ? <div className='subheading'>{subHeading}</div> : ''
+                        }
+
                     </Col> : ''
             }
+
             {
                 actionText && actionLink ?
                     <Col className="list_action">

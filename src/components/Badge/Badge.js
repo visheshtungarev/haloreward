@@ -9,10 +9,17 @@ export default function Badge({ badgeType, badgeText, badgeIcon, position }) {
 
     return (
         <Row align='center' className={` cardbadge ${badgeType} ${position} mx-1`}>
-            <Col className="deals_offer_title">
+
+
+
+
+            <Col
+                className={!badgeIcon ? `deals_offer_title m-0` : `deals_offer_title`}
+            >
                 {badgeText}
             </Col>
-            {badgeIcon}
+
+
         </Row >
     )
 }

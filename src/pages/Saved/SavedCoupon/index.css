@@ -1,0 +1,60 @@
+.whiteTab .ant-tabs-nav {
+    background: #fff;
+    padding: 0rem 4rem;
+    margin-top: 1.2rem;
+}
+
+.couponContainer>.ant-card-body {
+    display: flex;
+    /* align-items: center; */
+}
+
+.couponLogo {
+    border-right: 2px dashed #ddd;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fw-300 {
+    font-weight: 300;
+}
+
+.couponContainer:after {
+    content: "";
+    display: block;
+    height: 30px;
+    width: 16px;
+    background: #f7f7f7;
+    border-radius: 0px 50px 50px 0px;
+    position: absolute;
+    top: calc(50% - 15px);
+    left: 0;
+}
+
+.couponContainer:before {
+    content: "";
+    display: block;
+    height: 30px;
+    width: 16px;
+    background: #f7f7f7;
+    border-radius: 50px 0px 0px 50px;
+    position: absolute;
+    top: calc(50% - 15px);
+    right: 0;
+}
+
+.timer {
+    color: #FB5607;
+}
+
+.expiredCard h5, .expiredCard .dealicon_img_frame, .expiredCard p, .expiredCard .couponLogo {
+    opacity: .5;
+}
+
+.fixedTopRight {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}

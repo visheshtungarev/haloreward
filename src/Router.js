@@ -13,6 +13,11 @@ import Cashback from "./pages/Cashback/Cashback";
 import PrizeDraw from "./pages/PrizeDraw/PrizeDraw";
 import OnCardoffer from "./pages/OnCardOffer/OnCardOffer";
 import About from "./pages/About/About";
+import Saved from "./pages/Saved/Saved";
+import SavedCoupon from "./pages/Saved/SavedCoupon/SavedCoupon";
+import FavoriteBrands from "./pages/Saved/FavoriteBrands/FavoriteBrands";
+import SavedPrizeDraws from "./pages/Saved/SavedPrizeDraws/SavedPrizeDraws";
+import PickingFavoriteBrand from "./pages/Saved/FavoriteBrands/PickingFavoriteBrand";
 
 const RouterApp = () => {
 
@@ -22,6 +27,7 @@ const RouterApp = () => {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/all-brands" element={<AllBrands />} />
+        <Route path="/about" element={<About />} />
         <Route path="/popular-offers" element={<AllPopularOffers />} />
         <Route path="/all-offers" element={<AllOffers />} />
         <Route path="/all-brands/category" element={< BrandCategory />} />
@@ -30,8 +36,11 @@ const RouterApp = () => {
         <Route path="/cashback" element={<Cashback />} />
         <Route path="/prizedraw" element={<PrizeDraw />} />
         <Route path="/oncardOffer" element={<OnCardoffer />} />
-        <Route path="/about" element={<About />} />
-
+        <Route path="/saved" element={<Saved />} />
+        <Route path="/saved/saved-coupon" element={<SavedCoupon />} />
+        <Route path="/saved/favorite-brand" element={<FavoriteBrands />} />
+        <Route path="/saved/prize-draws" element={<SavedPrizeDraws />} />
+        <Route path="/saved/picking-favorite-brand" element={<PickingFavoriteBrand />} />
       </Routes>
       <Footer />
     </React.Fragment>
