@@ -117,3 +117,41 @@
 .ant-tabs-nav-wrap {
     overflow: visible;
 }
+
+.couponDivider {
+    position: relative;
+    width: calc(100% + 2rem);
+    margin: 1rem -1rem;
+}
+
+.couponDivider>span {
+    display: block;
+    border-top: 2px dashed #F7F7F7;
+    width: 100%;
+    margin-bottom: 1rem;
+
+}
+
+.couponDivider:after {
+    content: "";
+    display: block;
+    background: #F7F7F7;
+    height: 30px;
+    border-radius: 0px 50px 50px 0px;
+    width: 20px;
+    position: absolute;
+    left: 0;
+    top: -15px;
+}
+
+.couponDivider:before {
+    content: "";
+    display: block;
+    background: #F7F7F7;
+    height: 30px;
+    border-radius: 50px 0px 0px 50px;
+    width: 20px;
+    position: absolute;
+    right: 0;
+    top: -15px;
+}

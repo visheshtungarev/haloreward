@@ -91,52 +91,55 @@ export default function BrandDetails() {
             pageLink: '/myntra'
           }]} />
       </Row>
-      <div className='position-relative'>
-        <Row align="middle" className="mb-0 pb-0 brandWall" style={{
+      <div className='position-relative '>
+        <Row align="middle" className="mb-0 pb-0 brandWall d-none d-lg-block" style={{
           background: "url('/Images/offerBanner.jpg')"
         }}>
         </Row>
-        <Row className='list_view brandProfile'>
-          <Col span={6}>
-            <div className='brandImage'>
-              <img src='/Images/myntra.png' alt='img' />
-            </div>
-            <div className='whiteFrame'>
-              <h5>About Myntra</h5>
-              <p>{"While myntra was founded Germany, it has influence and roots all over the world. You'll find employees from over 100 nations working at its company headquarters in Her..."}</p>
-              <Link to="">Show more</Link>
-            </div>
+        <div className='list_view'>
+          <Row className=' brandProfile' gutter={30} lg={{ gutter: 0 }}>
+            <Col span={6} className="d-none d-lg-block">
+              <div className='brandImage'>
+                <img src='/Images/myntra.png' alt='img' />
+              </div>
+              <div className='whiteFrame'>
+                <h5>About Myntra</h5>
+                <p>{"While myntra was founded Germany, it has influence and roots all over the world. You'll find employees from over 100 nations working at its company headquarters in Her..."}</p>
+                <Link to="">Show more</Link>
+              </div>
 
-          </Col>
-          <Col className='brandInfo pl-4' span={18}>
-            <h4 className='fw-bold text-white'>Myntra</h4>
-            <p className='text-white d-flex align-items-center'>upto 11% cashback <span className='deviderWhite'></span> 24 coupons <span className='deviderWhite'></span> 2 prize draws</p>
+            </Col>
+            <Col className='brandInfo' span={24} lg={{ span: 18 }}>
+              <img className="dealicon_img_frame d-block d-lg-none mx-auto" src="/Images/myntra.png" />
+              <h4 className='fw-bold text-lg-left text-center py-3 py-lg-0'>Myntra</h4>
+              <p className='align-items-center d-none d-lg-flex'>upto 11% cashback <span className='deviderWhite'></span> 24 coupons <span className='deviderWhite'></span> 2 prize draws</p>
 
-            <Tabs defaultActiveKey="1" onChange={callback}>
-              <TabPane tab={<div className='d-flex align-items-center py-2'><img src='/Images/cashback.svg' height={40} /> &nbsp; <h6 className='mb-0'>Cashbacks</h6></div>} key="2">
+              <Tabs defaultActiveKey="1" onChange={callback}>
+                <TabPane tab={<div className='d-flex align-items-center py-2'><img src='/Images/cashback.svg' height={40} /> &nbsp; <h6 className='mb-0'>Cashbacks</h6></div>} key="2">
 
-                <div className='onCardOfferBanner mb-4'>
-                  <h4 className='mb-2'>On Card Offers</h4>
-                  <p className='mb-4'>Upfront cost must be £50+</p>
-                  <h3 className='d-inline-block'>10% OFF </h3> <small>Terms and Conditions*</small>
+                  <div className='onCardOfferBanner mb-4'>
+                    <h4 className='mb-2'>On Card Offers</h4>
+                    <p className='mb-4'>Upfront cost must be £50+</p>
+                    <h3 className='d-inline-block'>10% OFF </h3> <small>Terms and Conditions*</small>
 
-                </div>
+                  </div>
 
-                <Cashback />
-              </TabPane>
+                  <Cashback />
+                </TabPane>
 
-              <TabPane tab={<div className='d-flex align-items-center py-2'><img src='/Images/coupon.svg' height={40} /> &nbsp; <h6 className='mb-0'>Coupon</h6></div>} key="3">
-                <Coupon />
-              </TabPane>
+                <TabPane tab={<div className='d-flex align-items-center py-2'><img src='/Images/coupon.svg' height={40} /> &nbsp; <h6 className='mb-0'>Coupon</h6></div>} key="3">
+                  <Coupon />
+                </TabPane>
 
-              <TabPane tab={<div className='d-flex align-items-center py-2'><img src='/Images/prizeDraw.svg' height={40} /> &nbsp; <h6 className='mb-0'>PrizeDraw</h6></div>} key="1">
+                <TabPane tab={<div className='d-flex align-items-center py-2'><img src='/Images/prizeDraw.svg' height={40} /> &nbsp; <h6 className='mb-0'>PrizeDraw</h6></div>} key="1">
 
-                <PrizeDraw />
+                  <PrizeDraw />
 
-              </TabPane>
-            </Tabs>
-          </Col>
-        </Row>
+                </TabPane>
+              </Tabs>
+            </Col>
+          </Row>
+        </div>
       </div>
       <div className="list_view">
         <Heading
@@ -157,8 +160,8 @@ export default function BrandDetails() {
                 <>
                   <img className="dealicon " src={item.image} />
                   <p className="deals_title" style={{ minHeight: 'auto' }}>{item.title}</p>
-                  <p>{item.content}</p>
-
+                  {/* <p>{item.content}</p> */}
+                  <Row className=" cashback_info">upto 11% cashback</Row>
                 </>
               </Card>
             </Col>

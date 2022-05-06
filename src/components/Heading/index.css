@@ -43,7 +43,7 @@ button.filterBtn {
 
 @media only screen and (max-width: 767px) {
     .list_title {
-        width: 100%;
+        /* width: 100%; */
         margin-top: 1rem;
     }
 

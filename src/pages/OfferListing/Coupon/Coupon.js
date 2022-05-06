@@ -111,9 +111,9 @@ export default function Coupon() {
 
 
 
-            <Row align="middle" className="scrolledView" justify="space-around" gutter={30}>
+            <Row align="middle" justify="space-around" gutter={30} >
                 {dataArr && dataArr.map((item, i) =>
-                    <Col key={i} className="deals_box featuredOffers mb-4" span={24}>
+                    <Col key={i} className="deals_box featuredOffers mb-4" span={12} lg={{ span: 24 }}>
                         <Card
                             className="deals_container popularOffers"
                             actions={[
@@ -121,7 +121,7 @@ export default function Coupon() {
                             ]}
                         >
                             <div className="d-flex w-100 ">
-                                <div>
+                                <div className='d-none d-lg-block'>
                                     <div className='offerImg'>
                                         <h4 className='mb-0'>30%</h4>
                                         <p className='mb-0'>off</p>
@@ -132,28 +132,37 @@ export default function Coupon() {
                                         <div className='d-flex flex-grow-1'>
                                             <div className=''>
                                                 <div className="w-100 d-flex align-items-center justify-content-between">
-                                                    <p className="mb-0">{item.tag}</p>
+                                                    <p className="mb-0 d-none d-lg-block">{item.tag}</p>
                                                     <p className="mb-0 viewAllOffer">{item.viewAll}</p>
                                                 </div>
-                                                <div>
-                                                    <img className="dealicon_img_frame_lg_mobile" src={item.image} />
+                                                <div className='d-none d-lg-block'>
+                                                    <img className="dealicon_img_frame_lg_mobile " src={item.image} />
                                                 </div>
                                                 <p className="deals_title mt-0">{item.content}</p>
+                                                <p className='text-muted h5 d-block d-lg-none mb-3' style={{ fontWeight: 300 }}>Expires Sep 4, 2021</p>
+
                                             </div>
 
                                         </div>
-                                        <div className='d-flex justify-content-between align-items-between flex-column'>
+                                        <div className='justify-content-between align-items-between flex-column d-none d-lg-flex'>
                                             <div>
                                                 <span className='couponCode '>FAB67527fg</span>
                                             </div>
                                         </div>
                                     </Row>
+
+                                    <div className='couponDivider d-lg-none d-block'>
+                                        <span></span>
+                                    </div>
+
+                                    <Row className="d-lg-none d-flex cashback_info w-100">upto 11% cashback</Row>
+
                                     <Row align='center' className='w-100 mt-auto' justify='between'>
-                                        <Row key="time" className="">
+                                        <Row key="time" className="d-none d-lg-flex">
                                             <Link to='' className='d-flex align-items-center mr-3'> Show Details</Link>
                                             <span className='d-flex align-items-center'> <FiClock /> &nbsp; {item.time}</span>
                                         </Row>
-                                        <Button type="primary" className="px-md-5 px-3 ml-auto" onClick={showModal}>Copy & Shop</Button>
+                                        <Button type="primary" className="px-md-5 px-3 ml-auto d-none d-lg-block" onClick={showModal}>Copy & Shop</Button>
 
                                     </Row>
                                 </Row>

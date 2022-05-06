@@ -123,9 +123,9 @@ export default function PrizeDraw() {
             // actionLink="/Trending-offers"
             />
 
-            <Row align="middle" className="scrolledView" justify="space-around" gutter={30}>
+            <Row align="middle" className="" justify="space-around" gutter={30}>
                 {dataArr && dataArr.map((item, i) =>
-                    <Col key={i} className="deals_box featuredOffers mb-4" span={24}>
+                    <Col key={i} className="deals_box featuredOffers mb-4" span={12} lg={{ span: 24 }} >
                         <Card
                             className="deals_container popularOffers"
                             actions={[
@@ -133,24 +133,25 @@ export default function PrizeDraw() {
                             ]}
                         >
                             <div className="d-flex w-100 ">
-                                <div className='prizeDraw_box'>
+                                <div className='prizeDraw_box d-none d-lg-block'>
                                     <img className="" src="/Images/prize.svg" height={50} />
                                 </div>
                                 <Row align='space-between' className="flex-grow-1">
                                     <div className=''>
-                                        <div className="w-100 d-flex align-items-center justify-content-between">
+                                        <div className="w-100 d-lg-flex d-none align-items-center justify-content-between">
 
                                             <p className=' mb-0'>{item.tag}</p>
 
                                             <p className="mb-0 viewAllOffer">{item.viewAll}</p>
                                         </div>
-                                        <div>
+                                        <div className='d-none d-lg-block'>
                                             <img className="dealicon_img_frame_lg_mobile" src={item.image} />
                                         </div>
                                         <p className="deals_title mt-0">{item.content}</p>
+                                        <p className='text-muted h5 d-block d-lg-none mb-3' style={{ fontWeight: 300 }}>Expires Sep 4, 2021</p>
 
                                     </div>
-                                    <Row align='center' className='w-100 mt-auto' justify='between'>
+                                    <Row align='center' className='w-100 mt-auto d-lg-flex d-none' justify='between'>
                                         <Row key="time" className="">
                                             <Link to='' className='d-flex align-items-center mr-3'> Show Details</Link>
                                             <span className='d-flex align-items-center'> <FiClock /> &nbsp; {item.time}</span>

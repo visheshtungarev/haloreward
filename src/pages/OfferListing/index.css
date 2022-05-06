@@ -7,6 +7,10 @@
     border-radius: 1rem;
 }
 
+.brandInfo>p, .brandInfo>h4 {
+    color: #fff;
+}
+
 .brandWall {
     position: absolute;
     height: 280px;
@@ -61,7 +65,7 @@
     display: flex !important;
     flex-direction: column;
     /* justify-content: end; */
-    margin-top: 140px;
+    margin-top: 60px !important;
 }
 
 .brandProfile {
@@ -111,4 +115,33 @@
 .onCardOfferBanner small {
     opacity: .5;
     font-weight: normal;
+}
+
+
+@media only screen and (max-width: 993px) {
+
+    .brandInfo>p, .brandInfo>h4 {
+        color: #000 !important;
+    }
+
+    .brandInfo {
+        margin-top: 0 !important;
+    }
+
+    .ant-tabs-tab+.ant-tabs-tab {
+        margin: 0 0 0 10px !important;
+    }
+
+    .ant-tabs-tab {
+        flex-grow: 1;
+    }
+
+    .ant-tabs-tab h6 {
+        font-size: .9rem !important;
+    }
+
+    .ant-tabs-nav-list {
+        display: flex;
+        width: 100%;
+    }
 }

@@ -7,7 +7,7 @@ import Badge from "../Badge/Badge";
 
 export default function PopularOffers() {
     return (
-        <Row align="middle" className="scrolledView" justify="space-around" gutter={30}>
+        <Row align="middle" justify="space-around" gutter={30}>
             {HomeConstant?.popularOffers?.map((item, key) =>
                 <Col key={key} className="deals_box featuredOffers mb-4" span={12}>
                     <Card
@@ -23,7 +23,7 @@ export default function PopularOffers() {
                             <div className="flex-grow-1">
                                 <div>
                                     <div className="w-100 d-flex align-items-center justify-content-between">
-                                        <div className="d-flex">
+                                        <div className="d-md-flex">
                                             <Badge
                                                 position={''}
                                                 badgeType={item.offer}
@@ -39,7 +39,7 @@ export default function PopularOffers() {
                                         </div>
                                         <p className="mb-0 viewAllOffer">{item.viewAll}</p>
                                     </div>
-                                    <div>
+                                    <div className="py-3 py-md-0">
                                         <img className="dealicon_img_frame_lg_mobile" src={item.image} />
                                     </div>
                                     <p className="deals_title">{item.title}</p>
@@ -47,7 +47,7 @@ export default function PopularOffers() {
                                 <Row key="time" className="featured_offer_action ">
                                     <span>{item.time}</span>
                                 </Row>
-                                <Button type="primary" className="px-5">Reveal Code</Button>
+                                <Button type="primary" className="w-100">Reveal Code</Button>
                             </div>
                         </div>
                     </Card>
