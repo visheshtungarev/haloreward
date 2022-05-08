@@ -68,13 +68,13 @@ export default function Coupon() {
                                     codeType === 'cardcode' ?
 
                                         <div className="barcode">
-                                            <img src="/Images/barcode.png" height={80} />
+                                            <img src="/Images/barcode.png" className="codeImg" height={80} />
                                             <p className="codeIntruction mt-4">Scan code instore or ‘Copy & Go to Site’</p>
                                         </div>
                                         : codeType === 'qrcode' ?
 
                                             <div className="barcode">
-                                                <img src="/Images/qrcode.png" height={100} />
+                                                <img src="/Images/qrcode.png" className="codeImg" height={100} />
                                                 <p className="codeIntruction mt-4">Scan code instore or ‘Copy & Go to Site’</p>
                                             </div>
                                             : codeType === 'coupon' ?
@@ -83,7 +83,8 @@ export default function Coupon() {
                                                     <span className="couponCode px-5">FAB67527fg</span>
                                                 </div> : ''
                                 }
-                                <Button type="primary" className="px-5 ml-auto">Copy & GO to site</Button>
+
+                                <Button type="primary" className="px-5 justify-content-center align-items-center d-flex mx-auto">Copy & GO to site</Button>
 
                             </div>
                         </Col>
@@ -100,33 +101,38 @@ export default function Coupon() {
                         <Col className="  overflow-hidden featuredOffers mb-4" span={24} lg={{ span: 10 }}>
                             <Card className="deals_container rounded1 popularOffers">
                                 <h4 className="fw-bold mb-3">Coupon in <span className="theme-color">3 steps</span></h4>
-                                <div className="steps finished">
-                                    <div className="d-flex align-items-center pr-4">
-                                        <div className="stepicons ">
-                                            <img src="/Images/step1.svg" />
+                                <div className="threeSteps">
+                                    <div className="steps finished">
+                                        <div className="d-flex align-items-center pr-4">
+                                            <div className="stepicons ">
+                                                <img src="/Images/step1.svg" />
+                                            </div>
+                                            <h6 className="text-muted mb-0 ">Step 1</h6>
                                         </div>
-                                        <h6 claasName="text-muted mb-0 ">Step 1</h6>
+                                        <h6 className="">Copy the code and go to merchant’s site.</h6>
                                     </div>
-                                    <h6 claasName="">Copy the code and go to merchant’s site.</h6>
+                                    <div className="steps ">
+                                        <div className="d-flex align-items-center pr-4">
+                                            <div className="stepicons ">
+                                                <img src="/Images/step2.svg" />
+                                            </div>
+                                            <h6 className="text-muted mb-0 ">Step 1</h6>
+                                        </div>
+                                        <h6 claasName="">We’ll automatically paste the code at the
+                                            time of checkout.</h6>
+                                    </div>
+                                    <div className="steps">
+                                        <div className="d-flex align-items-center pr-4">
+                                            <div className="stepicons ">
+                                                <img src="/Images/step3.svg" />
+                                            </div>
+                                            {/* <h6 claasName="text-muted mb-0 ">Step 1</h6> */}
+                                        </div>
+                                        {/* <h6 claasName="">Copy the code and go to merchant’s site.</h6> */}
+                                    </div>
                                 </div>
-                                <div className="steps ">
-                                    <div className="d-flex align-items-center pr-4">
-                                        <div className="stepicons ">
-                                            <img src="/Images/step2.svg" />
-                                        </div>
-                                        <h6 claasName="text-muted mb-0 ">Step 1</h6>
-                                    </div>
-                                    <h6 claasName="">We’ll automatically paste the code at the
-                                        time of checkout.</h6>
-                                </div>
-                                <div className="steps">
-                                    <div className="d-flex align-items-center pr-4">
-                                        <div className="stepicons ">
-                                            <img src="/Images/step3.svg" />
-                                        </div>
-                                        {/* <h6 claasName="text-muted mb-0 ">Step 1</h6> */}
-                                    </div>
-                                    {/* <h6 claasName="">Copy the code and go to merchant’s site.</h6> */}
+                                <div className="stepsText d-lg-none d-block">
+                                    <h6 ><span className="text-muted mb-0 ">Step 1</span> &nbsp; Copy the code and go to merchant’s site.</h6>
                                 </div>
                             </Card>
                         </Col>

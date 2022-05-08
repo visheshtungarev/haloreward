@@ -58,3 +58,22 @@
     top: 10px;
     right: 10px;
 }
+
+@media only screen and (max-width: 993px) {
+    .whiteTab .ant-tabs-tab h6 {
+        font-size: .9rem !important;
+        padding: 0 2rem;
+    }
+
+    .whiteTab .ant-tabs-nav-list {
+        width: auto !important;
+    }
+
+    .whiteTab .ant-tabs-nav {
+        padding: 0rem 0rem !important;
+    }
+
+    .whiteTab .ant-tabs-tab {
+        padding: 0rem;
+    }
+}

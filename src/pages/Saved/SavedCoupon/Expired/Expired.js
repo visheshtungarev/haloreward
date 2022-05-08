@@ -67,9 +67,9 @@ export default function Expired() {
     return (
         <div className='list_view'>
 
-            <Row align="middle" className="scrolledView" justify="space-around" gutter={30}>
+            <Row align="middle" className="" justify="space-around" gutter={30}>
                 {allTredingOffers && allTredingOffers.map((item, i) =>
-                    <Col key={i} className="deals_box trending_brands mb-3 text-left expiredCard" span={8}>
+                    <Col key={i} className="deals_box trending_brands mb-3 text-left expiredCard" span={24} lg={{ span: 8 }}>
                         <Card className="couponContainer">
                             <span className='fixedTopRight'><img src='/Images/cross.svg' /></span>
                             <div className='d-flex'>

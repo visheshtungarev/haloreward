@@ -65,9 +65,9 @@ export default function Active() {
     return (
         <div className='list_view'>
 
-            <Row align="middle" className="scrolledView" justify="space-around" gutter={30}>
+            <Row align="middle" className="" justify="space-around" gutter={30}>
                 {allTredingOffers && allTredingOffers.map((item, i) =>
-                    <Col key={i} className="deals_box trending_brands mb-3 text-left" span={8}>
+                    <Col key={i} className="deals_box trending_brands mb-3 text-left" span={24} lg={{ span: 8 }}>
                         <Card className="couponContainer">
                             <div className='couponLogo'>
                                 <img src='/images/logo (3).png' height={50} />

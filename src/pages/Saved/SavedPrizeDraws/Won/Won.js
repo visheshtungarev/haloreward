@@ -8,8 +8,8 @@ export default function Won() {
     return (
         <div className='list_view'>
 
-            <Row align="middle" className="scrolledView" justify="space-around" gutter={30}>
-                <Col className="deals_box trending_brands mb-3 text-left " span={8}>
+            <Row align="middle" className="" justify="space-around" gutter={30}>
+                <Col className="deals_box trending_brands mb-3 text-left " span={24} lg={{ span: 8 }}>
                     <Card className="prizeDrawContainer">
 
                         <div className='d-flex align-items-center'>
@@ -28,7 +28,7 @@ export default function Won() {
                         </div>
                     </Card>
                 </Col>
-                <Col className="deals_box trending_brands mb-3 text-left " span={8}>
+                <Col className="deals_box trending_brands mb-3 text-left " span={24} lg={{ span: 8 }}>
                     <Card className="prizeDrawContainer">
 
                         <div className='d-flex align-items-center'>
@@ -47,7 +47,7 @@ export default function Won() {
                         </div>
                     </Card>
                 </Col>
-                <Col className="deals_box trending_brands mb-3 text-left " span={8}>
+                <Col className="deals_box trending_brands mb-3 text-left " span={24} lg={{ span: 8 }}>
                     <Card className="prizeDrawContainer">
 
                         <div className='d-flex align-items-center'>
@@ -66,7 +66,7 @@ export default function Won() {
                         </div>
                     </Card>
                 </Col>
-                <Col className="deals_box trending_brands mb-3 text-left " span={8}>
+                <Col className="deals_box trending_brands mb-3 text-left " span={24} lg={{ span: 8 }}>
                     <Card className="prizeDrawContainer">
 
                         <div className='d-flex align-items-center'>
@@ -85,7 +85,7 @@ export default function Won() {
                         </div>
                     </Card>
                 </Col>
-                <Col className="deals_box trending_brands mb-3 text-left " span={8}>
+                <Col className="deals_box trending_brands mb-3 text-left " span={24} lg={{ span: 8 }}>
                     <Card className="prizeDrawContainer">
 
                         <div className='d-flex align-items-center'>
@@ -104,7 +104,7 @@ export default function Won() {
                         </div>
                     </Card>
                 </Col>
-                <Col className="deals_box trending_brands mb-3 text-left " span={8}>
+                <Col className="deals_box trending_brands mb-3 text-left " span={24} lg={{ span: 8 }}>
                     <Card className="prizeDrawContainer">
 
                         <div className='d-flex align-items-center'>
@@ -123,7 +123,7 @@ export default function Won() {
                         </div>
                     </Card>
                 </Col>
-                <Col className="deals_box trending_brands mb-3 text-left " span={8}>
+                <Col className="deals_box trending_brands mb-3 text-left " span={24} lg={{ span: 8 }}>
                     <Card className="prizeDrawContainer">
 
                         <div className='d-flex align-items-center'>
@@ -142,7 +142,7 @@ export default function Won() {
                         </div>
                     </Card>
                 </Col>
-                <Col className="deals_box trending_brands mb-3 text-left " span={8}>
+                <Col className="deals_box trending_brands mb-3 text-left " span={24} lg={{ span: 8 }}>
                     <Card className="prizeDrawContainer">
 
                         <div className='d-flex align-items-center'>
@@ -161,7 +161,7 @@ export default function Won() {
                         </div>
                     </Card>
                 </Col>
-                <Col className="deals_box trending_brands mb-3 text-left " span={8}>
+                <Col className="deals_box trending_brands mb-3 text-left " span={24} lg={{ span: 8 }}>
                     <Card className="prizeDrawContainer">
 
                         <div className='d-flex align-items-center'>

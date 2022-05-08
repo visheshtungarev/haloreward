@@ -54,6 +54,26 @@
     transform: scale(1);
 }
 
+.customSelectMenu .outlineCategory {
+    display: block;
+}
+
+.customSelectMenu .filledCategory {
+    display: none;
+}
+
+.customSelectMenu:hover .outlineCategory {
+    display: none;
+}
+
+.customSelectMenu:hover .filledCategory {
+    display: block;
+}
+
+.menuHeader {
+    display: flex;
+}
+
 .customSelectMenu>.menuHeader>span {
     font-weight: 700;
     color: #858585;
@@ -69,7 +89,6 @@
 
 .category+div {
     display: none;
-
 }
 
 .category+div:hover, .category:hover+div {
@@ -86,10 +105,72 @@
     padding: 0 2rem;
 }
 
-@media only screen and (max-width: 1300px) {
-    /* .menuItem {
+
+
+@media only screen and (max-width: 993px) {
+    .category+div {
+        display: none !important;
+    }
+
+    .customSelectMenu .menuItem {
         position: fixed;
+        width: 100vw;
         left: 0;
-        top: 5rem
-    } */
+        top: 65px;
+        height: calc(100vh - 65px) !important;
+        overflow: auto;
+    }
+
+    .customSelectMenu .menuItem>.category {
+        min-width: 100%;
+    }
+
+    .menuItem ul a:hover {
+        background-color: #fff !important;
+        color: #3A86FF;
+    }
+
+    .menuItem>ul a {
+        display: flex;
+
+    }
+
+    .customSelectMenu .menuItem>.category>li:hover a:after {
+        transform: translate(0px, 5px) rotate(0deg);
+    }
+
+
+
+    .menuItem>ul>li>a:after {
+        content: "";
+        display: inline-block;
+        height: 15px;
+        width: 15px;
+        /* background: red; */
+        background-image: url('../../../public/Images/arrow_up.svg');
+        margin-left: auto;
+        margin-right: 0;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        transform: rotate(-90deg);
+        transform-origin: .7rem .7rem;
+        transition: all .3s;
+    }
+
+    .customSelectMenu .menuItem>.category>li .sub-category a:hover {
+        background-color: #F7F7F7 !important;
+    }
+
+    .customSelectMenu .menuItem>.category>li .sub-category {
+        height: 0;
+        overflow: hidden;
+        background-color: #F7F7F7;
+        margin: 0.3rem -1.5rem;
+        padding: 0rem 2rem;
+    }
+
+    .customSelectMenu .menuItem>.category>li:hover .sub-category {
+        height: auto;
+    }
 }

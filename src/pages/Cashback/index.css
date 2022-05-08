@@ -81,3 +81,99 @@
 .codeIntruction {
     color: #FB5607;
 }
+
+.ant-collapse {
+    background: #fff !important;
+    border: 0 solid !important;
+    padding: 0 !important;
+
+}
+
+.ant-collapse>.ant-collapse-item, .ant-collapse-content {
+    border-width: 0 !important;
+}
+
+.ant-collapse>.ant-collapse-item>.ant-collapse-header {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.ant-collapse-content>.ant-collapse-content-box, .ant-collapse>.ant-collapse-item>.ant-collapse-header {
+    padding: 0px !important;
+}
+
+.threeSteps {
+    display: flex;
+    flex-direction: column;
+}
+
+.steps .text-muted {
+    color: #CDCDCD;
+}
+
+@media only screen and (max-width: 993px) {
+
+    .couponFrame * {
+        text-align: left !important;
+    }
+
+    .couponFrame {
+        padding: 1rem !important;
+        margin: 1rem auto;
+    }
+
+    .couponFrame>div.d-flex {
+        justify-content: flex-start !important;
+    }
+
+    .couponFrame button {
+        width: 100%;
+    }
+
+    .threeSteps {
+        flex-direction: row;
+        /* justify-content: space-between; */
+    }
+
+    .steps>div {
+        padding: 0 !important;
+    }
+
+    .steps:after {
+        content: "";
+        display: block;
+        border: 1px dashed rgba(0, 0, 0, 0.2);
+        position: absolute;
+        top: 24px !important;
+        width: 100%;
+        height: 0 !important;
+        left: 50% !important;
+    }
+
+    .stepicons {
+        position: relative;
+        z-index: 1;
+        background: #fff;
+        margin: 0 !important;
+
+    }
+
+    .steps {
+        flex-direction: column;
+        padding-bottom: 0 !important;
+        margin-bottom: 1rem;
+        flex-grow: 1;
+    }
+
+    .steps>div {
+        flex-direction: column;
+    }
+
+    .stepicons+h6, .steps>h6 {
+        display: none;
+    }
+
+    .stepsText h6>span.text-muted {
+        color: #CDCDCD !important;
+    }
+}
