@@ -1,38 +1,41 @@
-import { Button, Checkbox, Col, Form, Input, Row } from 'antd'
+import { Button, Form, Input } from 'antd'
 import React from 'react'
-import { EyeOutlined } from '@ant-design/icons'
 import "./index.css"
-import { Link } from 'react-router-dom'
+import { EyeOutlined } from '@ant-design/icons'
 
-export default function Login({ goToRegister, forgotPwd }) {
-    function onChange(e) {
-        console.log(`checked = ${e.target.checked}`);
-    }
+import { Link } from 'react-router-dom'
+// import { Checkbox } from 'antd';
+
+
+export default function Register({ goToLogin, }) {
+    // function onChange(e) {
+    //     console.log(`checked = ${e.target.checked}`);
+    // }
     return (
         <Form autoComplete='new-password'>
             <div className='mb-4'>
-                <label>Email</label>
+                <label>First Name</label>
                 <div className='lineinput'>
-                    <Input placeholder="Email" autoComplete="new-password" type={'email'} />
+                    <Input placeholder="First Name" autoComplete="new-password" type={'text'} />
                 </div>
             </div>
             <div className='mb-4'>
-                <label>Password</label>
+                <label>Email address</label>
                 <div className='lineinput'>
-                    <Input placeholder="Password" autoComplete="new-password" type={'password'} suffix={<EyeOutlined />} />
+                    <Input placeholder="Email address" autoComplete="new-password" type={'email'} suffix={<EyeOutlined />} />
                 </div>
             </div>
-            <Row className='pb-4'>
+            {/* <Row className='pb-4'>
                 <Col span={12}>
                     <Checkbox onChange={onChange}>Remember Me</Checkbox>
                 </Col>
                 <Col span={12} className="text-right">
                     <Link to="" onClick={() => forgotPwd()} className='text-decoration-none'>Forgot password?</Link>
                 </Col>
-            </Row>
+            </Row> */}
             <div className='mb-4'>
                 <Button type="primary" className='w-100' size="large">
-                    Login
+                    Register
                 </Button>
             </div>
             <div className='mb-4 d-flex align-items-center justify-content-center'>
@@ -45,8 +48,8 @@ export default function Login({ goToRegister, forgotPwd }) {
             </div>
             <div className='py-md-4 py-0'></div>
             <div className='mb-4 text-center fw-bold'>
-                Don’t have an account yet? &nbsp;
-                <Link to="" onClick={() => goToRegister()}>Register</Link>
+                Already have an account? &nbsp;
+                <Link to="" onClick={() => goToLogin()}>Login</Link>
             </div>
         </Form>
     )

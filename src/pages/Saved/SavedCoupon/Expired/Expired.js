@@ -81,7 +81,6 @@ export default function Expired() {
                                     <p className="fw-bold h6 my-2" style={{ minHeight: 'auto' }}>Get 20% off on an   order of £150  </p>
                                     <small className='text-muted fw-300'>Expires Sep 4, 2021</small>
                                     <Badge
-
                                         badgeType={'oncard'}
                                         badgeText={'Expired'}
                                     />

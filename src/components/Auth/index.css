@@ -4,6 +4,13 @@
     border-width: 0px 0px 2px 0px;
 }
 
+.ant-modal-title_sm {
+    color: #120078 !important;
+    font-weight: 700 !important;
+    font-size: 1.5rem !important;
+    /* display: flex; */
+}
+
 .ant-modal-footer {
     display: none;
 }
