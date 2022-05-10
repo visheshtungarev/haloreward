@@ -196,7 +196,7 @@ export default function AllOffers() {
                         </>
                     }
                 />
-                <Row justify="space-around" gutter={40}>
+                <Row justify="space-around" gutter={30}>
 
                     <Col span={24} lg={{ span: 6 }}  >
                         {
@@ -212,12 +212,10 @@ export default function AllOffers() {
 
                     </Col>
                     <Col span={24} lg={{ span: 18 }}>
-                        <Row align='middle' gutter={30} justify="space-around">
 
 
 
-                            <PopularOffers />
-                        </Row>
+                        <PopularOffers />
                     </Col>
                 </Row>
 

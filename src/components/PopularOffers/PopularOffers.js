@@ -9,7 +9,7 @@ export default function PopularOffers() {
     return (
         <Row align="middle" justify="space-around" gutter={30}>
             {HomeConstant?.popularOffers?.map((item, key) =>
-                <Col key={key} className="deals_box featuredOffers mb-4" span={12}>
+                <Col key={key} className="deals_box featuredOffers mb-4" span={12} lg={{ span: 12 }}>
                     <Card
                         className="deals_container popularOffers"
                         actions={[

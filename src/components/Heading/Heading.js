@@ -8,7 +8,7 @@ import "./index.css";
 export default function Heading({ HeadingText, subHeading, actionText, actionLink, filter, color }) {
 
     return (
-        <Row className="headingFancy mt-4" align="middle" justify="space-between">
+        <Row className="headingFancy mt-md-4" align="middle" justify="space-between">
             {
                 HeadingText ?
                     <Col className={color ? `list_title ${color}` : `list_title`}>

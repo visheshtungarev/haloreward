@@ -13,10 +13,11 @@ export default function SendRequestLink({ timer }) {
                 <p className='text-muted'>A link to verify your email and to set password
                     has been sent to <b>sridhar@gmail.com</b></p>
             </div>
-            <p className='text-center' style={{
-                color: '#FB5607'
-            }}>Link expires in <b>{timer}</b></p>
+
             <div className='mb-4'>
+                <p className='text-center' style={{
+                    color: '#FB5607'
+                }}>Link expires in <b>{timer}</b></p>
                 <Button type="primary" className='w-100' size="large">
                     Continue
                 </Button>

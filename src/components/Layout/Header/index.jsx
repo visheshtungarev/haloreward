@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Row, Button, Input, Col } from "antd";
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { AiOutlineHeart, AiFillHeart, AiOutlineInfoCircle } from 'react-icons/ai'
 import "./index.css";
 import TopMenu from "../../TopMenu/TopMenu";
 import Login from '../../Auth/Login';
@@ -8,6 +10,10 @@ import SearchResult from '../../SearchResult/SearchResult';
 import Register from '../../Auth/Register';
 import ForgotPwd from '../../Auth/ForgotPwd';
 import SendRequestLink from '../../Auth/SendRequestLink';
+import LinkExpired from '../../Auth/LinkExpired';
+import SetPwd from '../../Auth/SetPwd';
+import ResetPwd from '../../Auth/ResetPwd';
+import PwdChangedSuccsessfully from '../../Auth/PwdChangedSuccsessfully';
 
 const { Search } = Input;
 
@@ -16,8 +22,14 @@ const Index = () => {
   const [minute, setMinute] = useState(1)
   const [searchOpen, setSearchOpen] = useState(false)
   const [modalChange, setModalChange] = useState('login')
-
+  const [heartActive, setHeartActive] = useState(false)
   const [isModalVisible, setIsModalVisible] = useState(false);
+  const navigate = useNavigate();
+
+  const location = useLocation()
+  console.log(location.pathname.split('/')[1])
+
+  const pageTitle = location.pathname.split('/')[1].replace('-', ' ').replace('/', '').toLowerCase()
 
   const showModal = () => {
     setIsModalVisible(true);
@@ -66,9 +78,57 @@ const Index = () => {
     setIsModalVisible(true);
     setModalChange('register')
   }
-
+  const makeFav = () => {
+    !heartActive ? setHeartActive(true) : setHeartActive(false)
+  }
   return (
     <>
+      {
+        location.pathname !== '/' && location.pathname !== '/saved' ?
+          <div className='headerSm'>
+            <div className='d-flex'>
+              <div>
+                <img src='/Images/arrow_back.svg' onClick={() => navigate(-1)} height={20} />
+              </div>
+              <div className='flex-grow-1 pageTitle pl-3'>{pageTitle}</div>
+              {
+                location.pathname === '/brand' ?
+
+                  <div className='px-3 rightsideCation'>
+                    <span>
+                      <AiOutlineInfoCircle />
+                    </span>
+                    &nbsp;&nbsp;
+                    <span onClick={() => makeFav()}>
+                      {
+                        !heartActive ? <AiOutlineHeart /> : <AiFillHeart />
+                      }
+                    </span>
+                  </div> : ''
+              }
+            </div>
+          </div>
+          :
+          <>
+
+
+            <Row className="header_container mobileview px-3" align="middle" justify="space-between">
+              <Col>
+                <img width={100} src="/Images/logo.png" />
+              </Col>
+              <Col className='d-flex align-items-center'>
+                <span className="d-inline-block px-2"><TopMenu mobileView={false} /></span>
+                <span className="d-inline-block px-2"><img src="/images/Bookmark_icon_outline.svg" /></span>
+                <Link to={'/login'} className="d-inline-block px-2"><img src="/images/user_icon_outline.svg" /></Link>
+              </Col>
+              <Col xs={24} className="mt-3">
+                <Search size="large" placeholder="Search stores" enterButton onChange={() => setSearchOpen(true)} />
+              </Col>
+            </Row>
+
+          </>
+      }
+
       <Row className="header_container webview" align="middle" justify="space-between">
         <Col>
           <img width={100} src="/Images/logo.png" />
@@ -99,21 +159,6 @@ const Index = () => {
         </Col>
       </Row>
 
-      <Row className="header_container mobileview px-3" align="middle" justify="space-between">
-        <Col>
-          <img width={100} src="/Images/logo.png" />
-        </Col>
-        <Col className='d-flex align-items-center'>
-          <span className="d-inline-block px-2"><TopMenu mobileView={false} /></span>
-          <span className="d-inline-block px-2"><img src="/images/Bookmark_icon_outline.svg" /></span>
-          <span className="d-inline-block px-2"><img src="/images/user_icon_outline.svg" /></span>
-        </Col>
-        <Col xs={24} className="mt-3">
-          <Search size="large" placeholder="Search stores" enterButton onChange={() => setSearchOpen(true)} />
-        </Col>
-      </Row>
-
-
 
       <ModalComp
         modalTitle={
@@ -139,14 +184,20 @@ const Index = () => {
           modalChange === 'login' ?
             <Login goToRegister={() => setModalChange('register')} forgotPwd={() => setModalChange('forgotPwd')} />
             : modalChange === 'register' ?
-              <Register goToLogin={() => setModalChange('login')} />
+              <Register registered={() => setModalChange('sendRequestLink')} goToLogin={() => setModalChange('login')} />
               : modalChange === 'forgotPwd' ?
                 <ForgotPwd sendRequestLink={() => setModalChange('sendRequestLink')} />
                 : modalChange === 'sendRequestLink' ?
                   <SendRequestLink timer={minute + ':' + second} sendRequestLink={() => setModalChange('sendRequestLink')} />
                   : modalChange === 'linkExpired' ?
-                    <SendRequestLink />
-                    : ''
+                    <LinkExpired goToRegister={() => setModalChange('register')} />
+                    : modalChange === 'setPwd' ?
+                      <SetPwd pwdChanged={() => setModalChange('pwdChanged')} />
+                      : modalChange === 'resetPwd' ?
+                        <ResetPwd pwdChanged={() => setModalChange('pwdChanged')} />
+                        : modalChange === 'pwdChanged' ?
+                          <PwdChangedSuccsessfully pwdChanged={() => setModalChange('pwdChanged')} />
+                          : ''
         }
       />
 

@@ -78,6 +78,10 @@ footer .ant-input-group input::placeholder {
 }
 
 @media only screen and (max-width: 993px) {
+    footer {
+        display: none;
+    }
+
     .visiblemobile {
         display: block !important;
     }

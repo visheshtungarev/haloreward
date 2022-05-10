@@ -337,6 +337,10 @@ img.dealicon_img_frame_lg {
         border-width: 00;
     }
 
+    .list_view:first-child {
+        margin-top: 0;
+    }
+
     .list_view {
         margin: 1rem 1rem;
     }

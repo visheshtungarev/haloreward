@@ -1,16 +1,15 @@
-import { Button, Form, Input } from 'antd'
+import { Button, Checkbox, Col, Form, Input, Row } from 'antd'
 import React from 'react'
 import "./index.css"
 import { EyeOutlined } from '@ant-design/icons'
 
 import { Link } from 'react-router-dom'
-// import { Checkbox } from 'antd';
 
 
-export default function Register({ goToLogin, }) {
-    // function onChange(e) {
-    //     console.log(`checked = ${e.target.checked}`);
-    // }
+export default function Register({ goToLogin, forgotPwd, registered }) {
+    function onChange(e) {
+        console.log(`checked = ${e.target.checked}`);
+    }
     return (
         <Form autoComplete='new-password'>
             <div className='mb-4'>
@@ -25,16 +24,16 @@ export default function Register({ goToLogin, }) {
                     <Input placeholder="Email address" autoComplete="new-password" type={'email'} suffix={<EyeOutlined />} />
                 </div>
             </div>
-            {/* <Row className='pb-4'>
+            <Row className='pb-4'>
                 <Col span={12}>
                     <Checkbox onChange={onChange}>Remember Me</Checkbox>
                 </Col>
                 <Col span={12} className="text-right">
                     <Link to="" onClick={() => forgotPwd()} className='text-decoration-none'>Forgot password?</Link>
                 </Col>
-            </Row> */}
+            </Row>
             <div className='mb-4'>
-                <Button type="primary" className='w-100' size="large">
+                <Button type="primary" onClick={() => registered()} className='w-100' size="large">
                     Register
                 </Button>
             </div>

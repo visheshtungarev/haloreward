@@ -18,6 +18,7 @@ import SavedCoupon from "./pages/Saved/SavedCoupon/SavedCoupon";
 import FavoriteBrands from "./pages/Saved/FavoriteBrands/FavoriteBrands";
 import SavedPrizeDraws from "./pages/Saved/SavedPrizeDraws/SavedPrizeDraws";
 import PickingFavoriteBrand from "./pages/Saved/FavoriteBrands/PickingFavoriteBrand";
+import LoginPage from "./components/Auth/LoginPage";
 
 const RouterApp = () => {
 
@@ -41,6 +42,8 @@ const RouterApp = () => {
         <Route path="/saved/favorite-brand" element={<FavoriteBrands />} />
         <Route path="/saved/prize-draws" element={<SavedPrizeDraws />} />
         <Route path="/saved/picking-favorite-brand" element={<PickingFavoriteBrand />} />
+        <Route path="/login" element={<LoginPage />} />
+
       </Routes>
       <Footer />
     </React.Fragment>

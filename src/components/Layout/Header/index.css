@@ -70,9 +70,28 @@ span.ant-select-selection-placeholder {
     height: auto;
 }
 
+.headerSm {
+    background: #fff;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: none;
+}
+
+.pageTitle {
+    text-transform: capitalize;
+}
+
+.rightsideCation {
+    font-size: 1.5rem;
+}
 
 @media only screen and (max-width: 993px) {
 
+
+    .headerSm {
+        display: block;
+    }
 
     .webview {
         display: none !important;

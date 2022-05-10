@@ -53,3 +53,21 @@ span.orDevider:before {
     padding: 0 1.3rem;
 
 }
+
+
+.auth-title {
+    color: #120078 !important;
+    font-weight: 700 !important;
+    font-size: 2rem !important;
+    display: flex;
+    align-items: center;
+}
+
+@media only screen and (max-width: 993px) {
+    .ant-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: calc(100vh - 180px);
+    }
+}
